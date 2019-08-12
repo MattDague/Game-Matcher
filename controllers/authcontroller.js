@@ -11,6 +11,10 @@ exports.dashboard = function(req, res) {
   res.render("dashboard");
 };
 
+exports.recommendations = function(req, res) {
+  res.render("recommendations");
+};
+
 exports.index = function(req, res) {
   res.render("index");
 };
