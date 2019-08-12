@@ -1,0 +1,265 @@
+<!-- Bootstrap-Powered HTML -->
+
+<!-- Students:
+  1. Where is the HTML document drawing its styles from?
+
+  2. How does our browser know which element to style in which way? (ex: button face or background banner)
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>GameMatcher</title>
+
+    <!-- We link our html to the Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- Container Div -->
+    <div class="container">
+
+        <!-- Section 1: Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <!-- Our brand / logo -->
+            <a class="navbar-brand" href="#">GameMatcher</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible button -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+
+                    <!-- The links of our navbar -->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+
+
+        <!-- a Bootstrap row with columns -->
+        <h2 id="left">Recommendations</h2>
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Actions
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Delete</a>
+                <a class="dropdown-item" href="#">Add to library</a>
+
+            </div>
+        </div>
+        </br>
+        <div class="row">
+
+            <div class="col-lg-3">
+                <div class="card">
+                    <img src="placeholder_img.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Game Title</h5>
+                        <p class="card-text"><strong>Platform:</strong></p>
+                        <p class="card-text"><strong><strong>Rating:</strong></strong></p>
+                        <p class="card-text"><strong>Recommended by:</strong></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Select
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card">
+                    <img src="placeholder_img.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Game Title</h5>
+                        <p class="card-text"><strong>Platform:</strong></p>
+                        <p class="card-text"><strong><strong>Rating:</strong></strong></p>
+                        <p class="card-text"><strong>Recommended by:</strong></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Select
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card">
+                    <img src="placeholder_img.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Game Title</h5>
+                        <p class="card-text"><strong>Platform:</strong></p>
+                        <p class="card-text"><strong><strong>Rating:</strong></strong></p>
+                        <p class="card-text"><strong>Recommended by:</strong></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Select
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card">
+                    <img src="placeholder_img.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Game Title</h5>
+                        <p class="card-text"><strong>Platform:</strong></p>
+                        <p class="card-text"><strong><strong>Rating:</strong></strong></p>
+                        <p class="card-text"><strong>Recommended by:</strong></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Select
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </br>
+        <div class="row">
+            <div class="col-8">
+                <h2>Your game library</h2>
+            </div>
+            <div class="col-4 text-right">
+                <small>Add more?</small>
+                <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                        View game list
+                      </button>
+                
+        </div>
+        </div>
+        </br>
+
+
+        <div class="row">
+
+            <div class="col-lg-3">
+                <div class="card">
+                    <img src="placeholder_img.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Game Title</h5>
+                        <p class="card-text"><strong>Platform:</strong></p>
+                        <p class="card-text"><strong><strong>Rating:</strong></strong></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Select
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card">
+                    <img src="placeholder_img.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Game Title</h5>
+                        <p class="card-text"><strong>Platform:</strong></p>
+                        <p class="card-text"><strong><strong>Rating:</strong></strong></p>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Select
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card">
+                    <img src="placeholder_img.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Game Title</h5>
+                        <p class="card-text"><strong>Platform:</strong></p>
+                        <p class="card-text"><strong><strong>Rating:</strong></strong></p>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Select
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card">
+                    <img src="placeholder_img.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Game Title</h5>
+                        <p class="card-text"><strong>Platform:</strong></p>
+                        <p class="card-text"><strong><strong>Rating:</strong></strong></p>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Select
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        </br>
+        <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+        <!-- Bootstrap's javascript file that allows the dropdown menu to work  -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+
+</body>
+
+</html>
