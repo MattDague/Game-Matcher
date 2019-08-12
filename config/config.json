@@ -1,15 +1,15 @@
 {
   "development": {
     "username": "root",
-    "password": "",
-    "database": "userdb",
+    "password": "marsball",
+    "database": "videogame_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "testdb",
+    "password": "marsball",
+    "database": "videogame_db",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
