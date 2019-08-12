@@ -1,4 +1,6 @@
 var exports = (module.exports = {});
+var db = require("../models");
+
 exports.signup = function(req, res) {
   res.render("signup");
 };
@@ -8,7 +10,13 @@ exports.signin = function(req, res) {
 };
 
 exports.dashboard = function(req, res) {
-  res.render("dashboard");
+  db.videogame.findAll({}).then(function(dbVideoGameData) {
+    console.log(dbVideoGameData);
+    var vgObject = {
+      games: dbVideoGameData
+    };
+    res.render("dashboard", vgObject);
+  });
 };
 
 exports.index = function(req, res) {

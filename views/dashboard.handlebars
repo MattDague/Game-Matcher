@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html>
- 
+
 <head>
-    <title>Passport with Sequelize</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/styles/styles.css" media="screen" title="no title">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <title>Select Games</title>
 </head>
- 
+
 <body>
-    <h2>Dashboard</h2>
-    <h5>Hurray! you are logged in.</h5>
- 
+
+    <div class="container">
+
+        <h2>Select your games</h2>
+        <p>Pick at least five games and click the submit button. You’ll get matched with another user who has a similar
+            taste in games and receive a game recommendation.</p>
+        <input type="text" id="myInput" onkeyup="searchGames()" placeholder="Search for games" title="Type in a name">
+
+        <table id="myTable">
+            <tr class="header">
+                <th style="width:20%;">Game Title</th>
+                <th style="width:20%;">Platform</th>
+                <th style="width:20%;">Genre</th>
+                <th style="width:20%;">Developer</th>
+                <th style="width:20%;">Release Date</th>
+            </tr>
+            {{#each games}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{platform}}</td>
+                <td>{{genre}}</td>
+                <td>{{developer}}</td>
+                 <td>{{year}}</td>
+            </tr>
+            {{/each}}
+
+
+            {{!-- <tr>
+                <td>Super Mario Bros. 3</td>
+                <td>SNES</td>
+                <td>Platformer</td>
+                <td>Nintendo</td>
+                <td>10/23/1987</td>
+            </tr> --}}
+
+        </table>
+    </div>
+
+    <script src="/js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
- 
+
 </html>
