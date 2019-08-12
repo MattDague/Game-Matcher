@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "",
-    "database": "userdb",
+    "password": "Huna7821",
+    "database": "videogame_db",
     "host": "localhost",
     "dialect": "mysql"
   },
