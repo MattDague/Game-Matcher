@@ -1,15 +1,18 @@
-var exports = module.exports = {}
+var exports = (module.exports = {});
 var db = require("../models");
 
-exports.signup = function (req, res) {
-    res.render('signup');
-}
+exports.signup = function(req, res) {
+  res.render("signup");
+};
 
-exports.signin = function (req, res) {
-    res.render('signin');
-}
+exports.signin = function(req, res) {
+  res.render("signin");
+};
 
 exports.dashboard = function(req, res) {
+  db.videogames.findAll({}).then(function(dbVideoGameData) {
+    console.log(dbVideoGameData);
+  });
   res.render("dashboard");
 };
 
