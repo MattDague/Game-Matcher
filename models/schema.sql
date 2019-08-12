@@ -9,7 +9,7 @@ CREATE TABLE videogames (
   platform VARCHAR(100) NULL,
   year INT NULL,
   genre VARCHAR(100) NULL,
-  critic_score INT default 0,
+  score INT default 0,
   developer VARCHAR(100) NULL,
   rating VARCHAR(100) NULL,
   PRIMARY KEY (id)

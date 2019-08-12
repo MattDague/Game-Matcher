@@ -10,10 +10,13 @@ exports.signin = function(req, res) {
 };
 
 exports.dashboard = function(req, res) {
-  db.videogames.findAll({}).then(function(dbVideoGameData) {
+  db.videogame.findAll({}).then(function(dbVideoGameData) {
     console.log(dbVideoGameData);
+    var vgObject = {
+      games: dbVideoGameData
+    };
+    res.render("dashboard", vgObject);
   });
-  res.render("dashboard");
 };
 
 exports.index = function(req, res) {
@@ -21,7 +24,7 @@ exports.index = function(req, res) {
 };
 
 exports.logout = function(req, res) {
-  req.session.destroy(function() {
+  req.session.destroy(function () {
     res.redirect("/");
   });
 };

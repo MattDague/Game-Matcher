@@ -8,15 +8,26 @@ module.exports = function(sequelize, Sequelize) {
       type: Sequelize.STRING,
       allowNull: false
     },
+    year: {
+      type: Sequelize.INTEGER,
+      allowNull: false
+    },
+    genre: {
+      type: Sequelize.STRING,
+      allowNull: false
+    },
+    score: {
+      type: Sequelize.STRING,
+      allowNull: false
+    },
     developer: {
       type: Sequelize.STRING,
       allowNull: false
     },
-    year: {
-      type: Sequelize.INTEGER,
+    rating: {
+      type: Sequelize.STRING,
       allowNull: false
     }
   });
   return Videogame;
 };
-;

@@ -28,14 +28,16 @@
                 <th style="width:20%;">Developer</th>
                 <th style="width:20%;">Release Date</th>
             </tr>
-            {{#each videogames}}
+            {{#each games}}
             <tr>
-                <td>
-                {{{<td>}}}
-                {{{<td>}}}
-                {{{<td>}}}
-                {{{<td>}}}
+                <td>{{name}}</td>
+                <td>{{platform}}</td>
+                <td>{{genre}}</td>
+                <td>{{developer}}</td>
+                 <td>{{year}}</td>
             </tr>
+            {{/each}}
+
 
             {{!-- <tr>
                 <td>Super Mario Bros. 3</td>
