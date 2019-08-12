@@ -21,7 +21,7 @@ body {
 }
 
 .nav>li {
-    float: left;
+    /* float: left; */
     color: white;
     text-decoration: none
 }

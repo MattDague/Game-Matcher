@@ -2,7 +2,7 @@
     "development": {
         "username": "root",
         "password": "Mommieto9",
-        "database": "userdb",
+        "database": "videogame_db",
         "host": "localhost",
         "dialect": "mysql"
     },
