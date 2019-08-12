@@ -19,6 +19,10 @@ exports.dashboard = function(req, res) {
   });
 };
 
+exports.recommendations = function(req, res) {
+  res.render("recommendations");
+};
+
 exports.index = function(req, res) {
   res.render("index");
 };
