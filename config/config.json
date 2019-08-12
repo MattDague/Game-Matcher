@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "development": {
         "username": "root",
         "password": "Mommieto9",
@@ -9,8 +8,8 @@
     },
     "test": {
         "username": "root",
-        "password": null,
-        "database": "testdb",
+        "password": "Mommieto9",
+        "database": "videogame_db",
         "host": "localhost",
         "dialect": "mysql",
         "logging": false
@@ -20,25 +19,3 @@
         "dialect": "mysql"
     }
 }
-=======
-  "development": {
-    "username": "root",
-    "password": "",
-    "database": "videogame_db",
-    "host": "localhost",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-    "password": "",
-    "database": "videogame_db",
-    "host": "localhost",
-    "dialect": "mysql",
-    "logging": false
-  },
-  "production": {
-    "use_env_variable": "JAWSDB_URL",
-    "dialect": "mysql"
-  }
-}
->>>>>>> ed9c405f0a57f3ff21be51a7ed674809bd1eca1c

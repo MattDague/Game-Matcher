@@ -2,98 +2,46 @@
     line-height: 2.5;
 }
 
-<<<<<<< HEAD
-body {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.navbar .container-fluid>.navbar-header {
-    color: white;
-    float: left;
-    margin-right: 10px;
-    height: 75px;
-}
-
-.navbar .navbar-nav {
-    float: left;
-    margin: 5px;
-    position: relative;
-    display: inline;
-}
-
-.nav>li {
-    /* float: left; */
-    color: white;
-    text-decoration: none
-}
-
-a {
-    color: white;
-    padding: 10px;
-}
-
-#sticky-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    /* Set the fixed height of the footer here */
-    height: 75px;
-    /* line-height: 75px; */
-    /* Vertically center the text there */
-}
-
-.center {
-    margin: auto;
-    width: 50%;
-    padding-bottom: 10%;
-}
-
-.formsig {
-    width: 80%;
-    margin: auto;
-=======
 thead {
-  display: table-header-group;
-  vertical-align: middle;
-  border-color: inherit;
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
 }
 
 tbody {
-  display: table-row-group;
-  vertical-align: middle;
-  border-color: inherit;
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
 }
 
 tr {
-  display: table-row;
-  vertical-align: inherit;
-  border-color: inherit;
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
 }
 
 th {
-  display: table-cell;
-  vertical-align: inherit;
-  font-weight: bold;
-  text-align: -internal-center;
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
 }
 
 .table {
-  width: 100%;
-  margin-bottom: 1rem;
-  color: #212529;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
 }
 
 td {
-  display: table-cell;
-  vertical-align: inherit;
+    display: table-cell;
+    vertical-align: inherit;
 }
 
 table {
-  display: table;
-  border-collapse: separate;
-  border-spacing: 2px;
-  border-color: grey;
-  width: 100%;
->>>>>>> ed9c405f0a57f3ff21be51a7ed674809bd1eca1c
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+    width: 100%;
 }
