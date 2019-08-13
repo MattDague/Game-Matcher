@@ -70,6 +70,20 @@ input[type=text], select {
   box-sizing: border-box;
 }
 
+.form-check-input {
+  float:left;
+}
+#checkbox {
+  padding-left: 20px;
+  padding-bottom: 35px;  
+  margin:0;
+}
+
+
+.form-check-label {
+  float: left;
+}
+
 input[type=submit] {
   width: 100%;
   background-color: #4CAF50;
@@ -86,7 +100,7 @@ input[type=submit]:hover {
 }
 
 #myInput {
-  width: 445px;
+  width: 500px;  
   float:left;
   margin-bottom: 10px;
 
@@ -121,7 +135,7 @@ input[type=submit]:hover {
   font-weight: bold;
 }
 
-.submit {
+#submitGame {
   margin-top: 20px;
   margin-bottom: 50px;
   background-color: #4CAF50;
