@@ -11,7 +11,7 @@ exports.signin = function(req, res) {
 
 exports.dashboard = function(req, res) {
   db.videogame.findAll({}).then(function(dbVideoGameData) {
-    console.log(dbVideoGameData);
+    // console.log(dbVideoGameData);
     var vgObject = {
       games: dbVideoGameData
     };
