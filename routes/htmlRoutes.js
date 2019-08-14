@@ -9,6 +9,7 @@ module.exports = function(app) {
     app.get('/signup', function(req, res) {
         res.render("signup");
     })
+
     app.get("/index", function(req, res) {
         db.Example.findAll({}).then(function(dbExamples) {
             res.render("index", {
