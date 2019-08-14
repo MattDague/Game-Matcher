@@ -34,7 +34,7 @@ h1 {
     height: 75px;
 }
 
-.navbar-brand {
+a.navbar-brand {
     padding-top: 25px;
 }
 
@@ -53,7 +53,7 @@ h1 {
 }
 
 a {
-    color: white;
+    color: white !important;
     padding: 10px;
 }
 
