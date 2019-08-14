@@ -29,5 +29,6 @@ module.exports = function(sequelize, Sequelize) {
       allowNull: false
     }
   });
+
   return Videogame;
 };
