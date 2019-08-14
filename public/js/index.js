@@ -141,5 +141,3 @@ $("#submitGame").click(function() {
   });
   userGames(arr);
 });
-
-
