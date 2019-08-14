@@ -1,49 +1,39 @@
 var db = require("../models");
 
-
-module.exports = function (app) {
-  // Get all examples
-  app.get("/api/videogames", function (req, res) {
-    db.videogame.findAll().then(function (vgObject) {
+module.exports = function(app) {
+  // Get all games
+  app.get("/api/videogames", function(req, res) {
+    db.videogame.findAll().then(function(vgObject) {
       res.json(vgObject);
     });
   });
 
-  // Create a new example
-  app.post("/api/videogames", function (req, res) {
+  // post new videogame to database
+  app.post("/api/videogames", function(req, res) {
     db.videogame
       .create({
         name: req.body.name,
         platform: req.body.platform,
+        year: req.body.year,
         genre: req.body.genre,
+        score: req.body.score,
         developer: req.body.developer,
-        year: req.body.year
+        rating: req.body.rating
       })
-
-      .then(function (dbVideogame) {
+      .then(function(dbVideogame) {
         res.json(dbVideogame);
       });
   });
 
-  // Delete an example by id
-  // app.delete("/api/examples/:id", function(req, res) {
-  //   db.Example.destroy({ where: { id: req.params.id } }).then(function(
-  //     dbExample
-  //   ) {
-  //     res.json(dbExample);
-  //   });
-  // });
   app.put("/api/videogames", function(req, res) {
-  console.log(req.body);
-
     db.user
       .update(
         {
-          game1: parseInt(arr[0]),
-          game2: parseInt(arr[1]),
-          game3: parseInt(arr[2]),
-          game4: parseInt(arr[3]),
-          game5: parseInt(arr[4])
+          game1: parseInt(req.body.games[0]),
+          game2: parseInt(req.body.games[1]),
+          game3: parseInt(req.body.games[2]),
+          game4: parseInt(req.body.games[3]),
+          game5: parseInt(req.body.games[4])
         },
         {
           where: {

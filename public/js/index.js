@@ -30,6 +30,7 @@ var API = {
   }
 };
 
+
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshExamples = function() {
   API.getExamples().then(function(data) {
@@ -119,9 +120,6 @@ function searchGames() {
 }
 
 function userGames(userGames) {
-  console.log("--------------");
-  console.log(userGames);
-  console.log("--------------");
   $.ajax({
     method: "PUT",
     url: "/api/videogames",
@@ -129,7 +127,7 @@ function userGames(userGames) {
   });
 }
 
-// Submitting and adding games to DB
+// Submitting and adding games to userDB
 $("#submitGame").click(function() {
   var arr = [];
   $.each($(".vgcb:checked"), function() {
@@ -142,4 +140,27 @@ $("#submitGame").click(function() {
   userGames(arr);
 });
 
+$('#gameDBAdd').on('click', function(event) {
+  event.preventDefault();
+  var newGame = {
+    name: $('#enterGameTitle').val(), 
+    platform: $("#platform").val(),
+    year: $("#enterReleaseDate").val(),
+    genre: $("#genre").val(),
+    score: 0,
+    developer: $("#enterDeveloper").val(), 
+    rating: 0
 
+  }
+  $.ajax({
+    method: "POST",
+    url: "/api/videogames",
+    data: newGame
+});
+
+});
+
+// $("#gameDBAdd").click(function() {
+
+//   userGames(arr);
+// });
