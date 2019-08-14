@@ -8,6 +8,19 @@ module.exports = function(app) {
     });
   });
 
+  // app.get("/api/videogames/", function(req, res) {
+  //   db.sequelize.query("SELECT * FROM ")
+  //     .findOne({
+  //       include: [db.videogame],
+  //       where: {
+  //         username: req.params.user
+  //       }
+  //     })
+  //     .then(function(userGames) {
+  //       res.json(userGames);
+  //     });
+  // });
+
   // post new videogame to database
   app.post("/api/videogames", function(req, res) {
     db.videogame
@@ -18,7 +31,6 @@ module.exports = function(app) {
         developer: req.body.developer,
         year: req.body.year
       })
-
       .then(function(dbVideogame) {
         res.json(dbVideogame);
       });

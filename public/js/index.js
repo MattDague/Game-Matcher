@@ -119,9 +119,6 @@ function searchGames() {
 }
 
 function userGames(userGames) {
-  console.log("--------------");
-  console.log(userGames);
-  console.log("--------------");
   $.ajax({
     method: "PUT",
     url: "/api/videogames",
@@ -129,7 +126,7 @@ function userGames(userGames) {
   });
 }
 
-// Submitting and adding games to DB
+// Submitting and adding games to user DB
 $("#submitGame").click(function() {
   var arr = [];
   $.each($(".vgcb:checked"), function() {
