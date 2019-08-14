@@ -1,19 +1,36 @@
-<!DOCTYPE html>
-<html>
- 
-<head>
-    <title></title>
-</head>
- 
 <body>
-    <form id="signup" name="signup" method="post" action="/signup">
-        <label for="username">Username</label>
-        <input class="text" name="username" type="text"/>
-        <label for="password">Password</label>
-        <input name="password" type="password" />
-        <input class="btn" type="submit" value="Sign Up" />
+
+<div class="navdiv">
+        <nav class="navbar navbar-inverse navbar-dark bg-dark mb-1">
+            <div class="container-fluid">
+
+                <div class="navbar-header">
+                    <a class="navbar-brand">Game Matcher</a>
+                </div>
+
+                <div style="display: inline-block;">
+                    {{!-- <ul class="nav navbar-nav">
+                        <li><a href="#">Login / Sign up</a>
+                        </li>
+                        <li><a href="#">Recommendations</a>
+                        </li>
+                        <li><a href="#">Account</a>
+                        </li>
+                    </ul> --}}
+                </div>
+
+            </div>
+        </nav>
+    </div>
+
+    <div class="wrapper">
+    <form id="signup" class="formBlock" name="signup" method="post" action="/signup">
+        {{!-- <label for="username">Username</label> --}}
+        <input class="text inputField" name="username" type="text" placeholder="User Name"/>
+        {{!-- <label for="password">Password</label> --}}
+        <input class="inputField" name="password" type="password" placeholder="password" />
+        <input class="subBtn btn" type="submit" value="Sign Up" />
     </form>
- 
+    </div>
 </body>
  
-</html>

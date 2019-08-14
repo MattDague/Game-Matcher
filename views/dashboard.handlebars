@@ -14,7 +14,28 @@
 </head>
 
 <body>
+    <div class="navdiv">
+        <nav class="navbar navbar-inverse navbar-dark bg-dark mb-1">
+            <div class="container-fluid">
 
+                <div class="navbar-header">
+                    <a class="navbar-brand">Game Matcher</a>
+                </div>
+
+                <div style="display: inline-block;">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Login / Sign up</a>
+                        </li>
+                        <li><a href="#">Recommendations</a>
+                        </li>
+                        <li><a href="#">Account</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </div>
     <div class="container">
         <div class="topSection">
             <h2>Select your games</h2>
@@ -117,7 +138,7 @@
                         </div>
                         <div class="form-group">
                             <label for="platform">Select Genre</label>
-                            <select class="form-control" id="platform">
+                            <select class="form-control" id="genre">
                                 <option>Action</option>
                                 <option>Adventure</option>
                                 <option>Fighting</option>
@@ -143,7 +164,7 @@
                         <div class="form-group">
                             <label for="enterReleaseDate">Release Date</label>
                             <input type="text" class="form-control" id="enterReleaseDate"
-                                aria-describedby="release" placeholder="mm/dd/yyy">
+                                aria-describedby="release" placeholder="yyyy">
                         </div>
                         <button type="submit" class="btn btn-primary">Add</button>
                     </form>

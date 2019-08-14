@@ -27,9 +27,11 @@ module.exports = function(app) {
       .create({
         name: req.body.name,
         platform: req.body.platform,
+        year: req.body.year,
         genre: req.body.genre,
+        score: req.body.score,
         developer: req.body.developer,
-        year: req.body.year
+        rating: req.body.rating
       })
       .then(function(dbVideogame) {
         res.json(dbVideogame);
