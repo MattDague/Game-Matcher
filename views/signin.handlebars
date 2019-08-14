@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html>
- 
-<head>
-    <title></title>
-</head>
- 
-<body>
-    <form id="signin" name="signin" method="post" action="signin">
-        <label for="username">Username</label>
-        <input class="text" name="username" type="text" />
-        <label for="password">Password</label>
-        <input name="password" type="password" />
-        <input class="btn" type="submit" value="Sign In" />
-    </form>
- 
+ <body>
+    <div class="wrapper">
+        <h1 class="titleTag">Welcome Gamer</h1>
+        <h4 class="tagLine">Kindly log in to access the site</h4>
+
+        <form class="formBlock" id="signin" name="signin" method="post" action="signin">
+            <input class="inputField text" type="text" name="username" placeholder="user name"><br>
+            <input class="inputField" type="password" name="password" placeholder="password"><br><br>
+            <input class="subBtn btn" type="submit" value="Sign In">
+        </form>
+        <div class="strike">
+            <span>or</span>
+        </div>
+        <input class="suBtn" id="signUpBtn" type="submit" value="Sign Up">
+        <h5>You can sign up quite easily to become a member</h5>
+
+    </div>
 </body>
- 
-</html>

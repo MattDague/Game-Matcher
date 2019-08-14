@@ -1,152 +1,331 @@
+/* ======================== Global Formatting ===================== */
+
+body {
+    background-color: white;
+    width: 100%;
+    margin: auto;
+    font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+    margin-top: 20px !important;
+    padding: 2rem;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    flex: 1;
+}
+
+h1 {
+    font-weight: 1200;
+}
+
+
+/* ===================== End of Global styles ===================== */
+
+
+/* ====================== Navbar formatting ======================= */
+
+.navbar .container-fluid>.navbar-header {
+    /* background-color: #444; */
+    color: white;
+    float: left;
+    margin-right: 10px;
+    height: 75px;
+}
+
+.navbar-brand {
+    padding-top: 25px;
+}
+
+.navbar .navbar-nav {
+    /* background-color: #444; */
+    float: left;
+    margin: 5px;
+    /* position: relative; */
+    display: inline;
+}
+
+.nav>li {
+    float: left;
+    color: white;
+    text-decoration: none
+}
+
+a {
+    color: white;
+    padding: 10px;
+}
+
+a:hover {
+    color: #ffd600;
+}
+
+
+/* ======================= end of Navbar formatting ======================= */
+
+
+/* ========================= Table Formatting ===================== */
+
 .list-group-item {
-  line-height: 2.5;
+    line-height: 2.5;
 }
 
 td {
-  display: table-cell;
-  vertical-align: inherit;
-  border-left: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  padding: 8px;
+    display: table-cell;
+    vertical-align: inherit;
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 8px;
 }
 
 thead th {
-  display: table-header-group;
-  vertical-align: middle;
-  border-color: inherit;
-  border-right: 1px solid #eee;
-  width: 100%;
-  position: -webkit-sticky;
-  /* for Safari */
-  position: sticky;
-  top: 0;
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border-right: 1px solid #eee;
+    width: 100%;
+    position: -webkit-sticky;
+    /* for Safari */
+    position: sticky;
+    top: 0;
 }
 
 th {
-  background-color: black;
-  color: white;
-  padding: 8px;
+    background-color: black;
+    color: white;
+    padding: 8px;
 }
 
 th th:first-child {
-  left: 0;
-  z-index: 1;
+    left: 0;
+    z-index: 1;
 }
 
 tbody {
-  display: table-row-group;
-  vertical-align: middle;
-  border-color: inherit;
-  border-right: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  left: 0;
-  width: 100%;
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    left: 0;
+    width: 100%;
 }
 
 tr {
-  display: table-row;
-  vertical-align: inherit;
-  border-color: inherit;
-  width: 100%;
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    width: 100%;
 }
 
 table {
-  display: table;
-  border-collapse: separate;
-  border-color: grey;
-  width: 100%;
-  overflow-y: scroll;
-  height: 515px;
-  display: block;
-  border-spacing: 0;
-}
-
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.form-check-input {
-  float:left;
-}
-#checkbox {
-  padding-left: 20px;
-  padding-bottom: 35px;  
-  margin:0;
+    display: table;
+    border-collapse: separate;
+    border-color: grey;
+    width: 100%;
+    overflow-y: scroll;
+    height: 515px;
+    display: block;
+    border-spacing: 0;
 }
 
 
-.form-check-label {
-  float: left;
-}
+/* ========================= End of Table Formatting ======================= */
+
+
+/* ======================== Form and Button Formatting ===================== */
 
 input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+    width: 50%;
+    background-color: #444;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+    background-color: #dab916;
+}
+
+input[type=text],
+select {
+    width: 50%;
+    padding: .5 rem;
+    display: inline-block;
+    border: 1px solid #444;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.inputField {
+    width: 50%;
+    padding: .5rem;
+    margin: 7.5px;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+.form-check-input {
+    float: left;
+}
+
+#checkbox {
+    padding-left: 20px;
+    padding-bottom: 35px;
+    margin: 0;
+}
+
+.form-check-label {
+    float: left;
+}
+
+.subBtn {
+    background-color: #444;
+    color: white;
+    width: 50%;
+    padding: .5 rem;
+    margin: 7.5;
+    border-radius: 5px;
+}
+
+.suBtn {
+    margin-top: 5%;
+    background-color: #444;
+    color: white;
+    width: 50%;
+    padding: .5 rem;
+    margin: 7.5;
+    border-radius: 5px;
 }
 
 #myInput {
-  width: 500px;  
-  float:left;
-  margin-bottom: 10px;
-
+    width: 500px;
+    float: left;
+    margin-bottom: 10px;
 }
 
+
+/* ============================= Manny edits ================================== */
+
+
+/* strike thru line */
+
+.strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 5%;
+}
+
+.strike>span {
+    position: relative;
+    display: inline-block;
+}
+
+.strike>span:before,
+.strike>span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 1240%;
+    height: 1px;
+    background: rgb(36, 35, 35);
+}
+
+.strike>span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.strike>span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+.suBtn {
+    margin-top: 5%;
+    background-color: #444;
+    color: white;
+    width: 50%;
+    padding: 1rem;
+    margin: 7.5;
+    border-radius: 5px;
+}
+
+.subBtn {
+    background-color: #444;
+    color: white;
+    width: 50%;
+    padding: 1rem;
+    margin: 7.5;
+    border-radius: 5px;
+}
+
+
+/* ============================= Page specific formatting ========================= */
+
 #instructionText {
-  width: 645px;
-  margin-bottom: 30px;
+    width: 645px;
+    margin-bottom: 30px;
 }
 
 .topSection {
-  margin-top: 50px;
-  margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 .addGame {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
-
 .add {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 13px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 4px;
-  float: right;
-  font-weight: bold;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 13px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    float: right;
+    font-weight: bold;
 }
 
 #submitGame {
-  margin-top: 20px;
-  margin-bottom: 50px;
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 13px 20px;
-  width: 100%;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 4px;
-  font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 13px 20px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+
+/* ======================= End of Page specifics ========================= */
+
+
+/* ============================== Footer ================================== */
+
+#sticky-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    /* Set the fixed height of the footer here */
+    height: 75px;
+    /* line-height: 75px; */
+    /* Vertically center the text there */
 }

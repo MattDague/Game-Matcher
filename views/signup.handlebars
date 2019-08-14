@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html>
- 
-<head>
-    <title></title>
-</head>
- 
 <body>
-    <form id="signup" name="signup" method="post" action="/signup">
-        <label for="username">Username</label>
-        <input class="text" name="username" type="text"/>
-        <label for="password">Password</label>
-        <input name="password" type="password" />
-        <input class="btn" type="submit" value="Sign Up" />
+    <div class="wrapper">
+    <form id="signup" class="formBlock" name="signup" method="post" action="/signup">
+        {{!-- <label for="username">Username</label> --}}
+        <input class="text inputField" name="username" type="text" placeholder="User Name"/>
+        {{!-- <label for="password">Password</label> --}}
+        <input class="inputField" name="password" type="password" placeholder="password" />
+        <input class="subBtn btn" type="submit" value="Sign Up" />
     </form>
- 
+    </div>
 </body>
  
-</html>
