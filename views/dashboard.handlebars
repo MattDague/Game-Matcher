@@ -21,7 +21,11 @@
             <div class="addGame">
                 <input type="text" id="myInput" onkeyup="searchGames()" placeholder="Search for games"
                     title="Type in a name">
-                <button class="add">Add a game</button>
+                <!-- Button trigger modal -->
+                <button type="button" class="add btn btn-primary" data-toggle="modal" data-target="#addGameModal">
+                    Add new game
+                </button>
+
             </div>
         </div>
     </div>
@@ -55,8 +59,103 @@
         <button id="submitGame">Submit</button>
 
     </div>
+
+    <!-- Modal Start -->
+    <div class="modal fade" id="addGameModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add new game</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="form-group">
+                            <label for="enterGameTitle">Game Title</label>
+                            <input type="email" class="form-control" id="enterGameTitle"
+                                aria-describedby="emailHelp" placeholder="Enter game title">
+                        </div>
+                        <div class="form-group">
+                            <label for="platform">Select Platform</label>
+                            <select class="form-control" id="platform">
+                                <option>2600</option>
+                                <option>3D0</option>
+                                <option>3DS</option>
+                                <option>DC</option>
+                                <option>DS</option>
+                                <option>GB</option>
+                                <option>GBA</option>
+                                <option>GC</option>
+                                <option>GEN</option>
+                                <option>GG</option>
+                                <option>N64</option>
+                                <option>NES</option>
+                                <option>NG</option>
+                                <option>PC</option>
+                                <option>PCFX</option>
+                                <option>PS</option>
+                                <option>PS2</option>
+                                <option>PS3</option>
+                                <option>PS4</option>
+                                <option>PSP</option>
+                                <option>PSV</option>
+                                <option>SAT</option>
+                                <option>SCD</option>
+                                <option>SNES</option>
+                                <option>TG16</option>
+                                <option>Wii</option>
+                                <option>WiiU</option>
+                                <option>WS</option>
+                                <option>X360</option>
+                                <option>XB</option>
+                                <option>XOne</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="platform">Select Genre</label>
+                            <select class="form-control" id="platform">
+                                <option>Action</option>
+                                <option>Adventure</option>
+                                <option>Fighting</option>
+                                <option>Misc</option>
+                                <option>Platform</option>
+                                <option>Puzzle</option>
+                                <option>Racing</option>
+                                <option>Role-Playing</option>
+                                <option>Shooter</option>
+                                <option>Simulation</option>
+                                <option>Sports</option>
+                                <option>Strategy</option>
+                                
+                            </select>
+                        </div>
+                        <form>
+                        <div class="form-group">
+                            <label for="enterGameTitle">Developer</label>
+                            <input type="developer" class="form-control" id="enterDeveloper"
+                                aria-describedby="emailHelp" placeholder="Enter developer">
+                        </div>
+                        <form>
+                        <div class="form-group">
+                            <label for="enterReleaseDate">Release Date</label>
+                            <input type="text" class="form-control" id="enterReleaseDate"
+                                aria-describedby="release" placeholder="mm/dd/yyy">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal End -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="/js/index.js"></script>
 </body>
 
