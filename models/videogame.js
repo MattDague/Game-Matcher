@@ -27,6 +27,10 @@ module.exports = function(sequelize, Sequelize) {
     rating: {
       type: Sequelize.STRING,
       allowNull: false
+    },
+    img: {
+      type: Sequelize.STRING,
+      allowNull: true
     }
   });
   return Videogame;
