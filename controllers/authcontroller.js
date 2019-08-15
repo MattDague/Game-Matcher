@@ -145,8 +145,10 @@ exports.logout = function(req, res) {
   });
 };
 
+
 exports.userlist = function(req, res) {
   db.user.findAll({}).then(function(userData) {
     res.json(userData);
   });
 };
+

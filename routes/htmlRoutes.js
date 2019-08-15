@@ -10,12 +10,22 @@ module.exports = function(app) {
     res.render("signup");
   });
 
-  app.get("/index", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
+
+    // Logout function 
+    app.get('/logout', function(req, res) {
+        req.logout();
+        res.redirect('/signin');
+    });
+
+
+    app.get("/index", function(req, res) {
+        db.Example.findAll({}).then(function(dbExamples) {
+            res.render("index", {
+                msg: "Welcome!",
+                examples: dbExamples
+            });
+        });
+
     });
   });
 

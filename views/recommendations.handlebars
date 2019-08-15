@@ -35,12 +35,12 @@
 
     <div style="display: inline-block;">
       <ul class="nav navbar-nav">
-        <li><a href="#">Login / Sign up</a>
+        <li><a href="/dashboard">Dashboard</a>
         </li>
-        <li><a href="#">Recommendations</a>
+        <li><a href="/api/videogames">API Lists</a>
         </li>
-        <li><a href="#">Account</a>
-        </li>
+        <li><a href="/logout">Logout</a>
+                        </li>
       </ul>
     </div>
 
@@ -108,7 +108,7 @@
                 <h2>Your game library</h2>
             </div>
             <div class="col-4 text-right">
-                <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                <button id="viewGameListBtn" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
                         View game list
                       </button>
                 
@@ -139,7 +139,7 @@
 
         <!-- Bootstrap's javascript file that allows the dropdown menu to work  -->
         <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
-
+<script src="/js/index.js"></script>
 </body>
 
 </html>

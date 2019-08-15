@@ -5,9 +5,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="public/styles/reset.css">
     <link rel="stylesheet" href="public/styles/styles.css" media="screen" title="no title">
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap');
-    </style>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -19,12 +17,10 @@
 
     <div class="container">
         <div class="topSection">
-            <h2>Select your games</h2>
+            <h2>Select at least five games</h2>
             <div class="addGame">
                 <input type="text" id="myInput" onkeyup="searchGames()" placeholder="Search for games"
                     title="Type in a name">
-                <button id="submitGame">Submit</button>
-
                 <!-- Button trigger modal -->
                 <button type="button" class="add btn btn-primary" data-toggle="modal" data-target="#addGameModal">
                     Add new game
@@ -37,10 +33,10 @@
         <table id="myTable">
             <tr class="header">
                 <th style="width: 5%;"></th>
-                <th style="width:35%;">Game Title</th>
-                <th style="width:15%;">Platform</th>
-                <th style="width:15%;">Genre</th>
-                <th style="width:15%;">Developer</th>
+                <th style="width:40%;">Game Title</th>
+                <th style="width:10%;">Platform</th>
+                <th style="width:10%;">Genre</th>
+                <th style="width:20%;">Developer</th>
                 <th style="width:15%;">Release Date</th>
             </tr>
             {{#each games}}
@@ -58,7 +54,10 @@
                 <td>{{year}}</td>
             </tr>
             {{/each}}
+
         </table>
+        <button id="submitGame">Submit</button>
+
     </div>
 
     <!-- Modal Start -->
@@ -73,10 +72,12 @@
                     </button>
                 </div>
                 <div class="modal-body">
+
                     <form>
                         <div class="form-group">
                             <label for="enterGameTitle">Game Title</label>
-                            <input type="text" class="form-control" id="enterGameTitle" placeholder="Enter game title">
+                            <input type="text" class="form-control" id="enterGameTitle"
+                                aria-describedby="emailHelp" placeholder="Enter game title">
                         </div>
                         <div class="form-group">
                             <label for="platform">Select Platform</label>
@@ -116,7 +117,7 @@
                         </div>
                         <div class="form-group">
                             <label for="platform">Select Genre</label>
-                            <select class="form-control" id="platform">
+                            <select class="form-control" id="genre">
                                 <option>Action</option>
                                 <option>Adventure</option>
                                 <option>Fighting</option>
@@ -129,38 +130,37 @@
                                 <option>Simulation</option>
                                 <option>Sports</option>
                                 <option>Strategy</option>
+                                
                             </select>
                         </div>
                         <form>
+                        <div class="form-group">
+                            <label for="enterGameTitle">Developer</label>
+                            <input type="developer" class="form-control" id="enterDeveloper"
+                                aria-describedby="emailHelp" placeholder="Enter developer">
+                        </div>
+                        <form>
+                        <div class="form-group">
+                            <label for="enterReleaseDate">Release Date</label>
+                            <input type="text" class="form-control" id="enterReleaseDate"
+                                aria-describedby="release" placeholder="yyyy">
+                        </div>
                             <div class="form-group">
-                                <label for="enterGameTitle">Developer</label>
-                                <input type="text" class="form-control" id="enterDeveloper"
-                                    placeholder="Enter developer">
-                            </div>
-                            <form>
-                                <div class="form-group">
-                                    <label for="enterReleaseDate">Release Date</label>
-                                    <input type="date" class="form-control" aria-describedby="release"
-                                        placeholder="mm/dd/yyyy" id="enterReleaseDate">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Add</button>
-                            </form>
-                        </form>
+                            <label for="enterImg">Enter Image Link</label>
+                            <input type="text" class="form-control" id="enterImg"
+                                aria-describedby="image" placeholder="Image">
+                        </div>
+                        <button type="submit" id="addGameSubmit" class="btn btn-primary">Add</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
     <!-- Modal End -->
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="/js/index.js"></script>
 </body>
 
