@@ -2,19 +2,76 @@
   line-height: 2.5;
 }
 
+
+.wrapper {
+  margin-top: 20px !important;
+  padding: 2rem;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  flex: 1;
+}
+
+.navbar .container-fluid>.navbar-header {
+  /* background-color: #444; */
+  color: white;
+  float: left;
+  margin-right: 10px;
+  height: 75px;
+}
+
+a.navbar-brand {
+  padding-top: 25px;
+}
+
+.nav>li {
+  float: left;
+  color: white;
+  text-decoration: none
+}
+
+a {
+  color: white !important;
+  padding: 10px;
+}
+
+a:hover {
+  color: #ffd600;
+}
+
+body {
+  background-color: #F4F6F9 !important;
+}
+
+h1 {
+  color: #09202E !important;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+h2 {
+  color: #09202E !important;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: bold !important;
+}
+
+p {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
 td {
   display: table-cell;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #09202E;
   vertical-align: inherit;
-  border-left: 1px solid #eee;
   border-bottom: 1px solid #eee;
   padding: 8px;
+  background-color: #fff;
 }
 
 thead th {
   display: table-header-group;
   vertical-align: middle;
   border-color: inherit;
-  border-right: 1px solid #eee;
   width: 100%;
   position: -webkit-sticky;
   /* for Safari */
@@ -23,7 +80,9 @@ thead th {
 }
 
 th {
-  background-color: black;
+  background-color: #515865;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: bold !important;
   color: white;
   padding: 8px;
 }
@@ -37,7 +96,6 @@ tbody {
   display: table-row-group;
   vertical-align: middle;
   border-color: inherit;
-  border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
   left: 0;
   width: 100%;
@@ -56,9 +114,11 @@ table {
   border-color: grey;
   width: 100%;
   overflow-y: scroll;
-  height: 515px;
-  display: block;
+  height: 548px;
+  display: flex;
   border-spacing: 0;
+  background-color: #fff;
+  margin-bottom: 50px;
 }
 
 input[type=text], select {
@@ -71,22 +131,40 @@ input[type=text], select {
 }
 
 .form-check-input {
-  float:left;
-}
-#checkbox {
-  padding-left: 20px;
-  padding-bottom: 35px;  
-  margin:0;
+  float: left;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
+#checkbox {
+  padding-left: 20px;
+  padding-bottom: 35px;
+  margin: 0;
+}
+
+input[type=text], select {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
 
 .form-check-label {
   float: left;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.form-control-label {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.form-control {
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 input[type=submit] {
   width: 100%;
-  background-color: #4CAF50;
+  background-color: #4761CC;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -95,15 +173,36 @@ input[type=submit] {
   cursor: pointer;
 }
 
+.btn-primary:active:focus {
+  background-color: #4761CC!important;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: bold !important;
+}
+
+label {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #09202E;
+}
+
+table {
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
 input[type=submit]:hover {
   background-color: #45a049;
 }
 
 #myInput {
-  width: 500px;  
-  float:left;
-  margin-bottom: 10px;
-
+  width: 500px;
+  float: left;
+  margin-bottom: 15px;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #09202E;
 }
 
 #instructionText {
@@ -113,16 +212,37 @@ input[type=submit]:hover {
 
 .topSection {
   margin-top: 50px;
-  margin-bottom: 20px;
 }
 
 .addGame {
   margin-top: 30px;
 }
 
+.btn:not([disabled]):not(.disabled) {
+  background-color: #4761CC;
+  border: none;
+  color: white;
+  padding: 13px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  float: right;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: bold !important;
+}
+
+.modal-title {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: bold !important;
+  color: #09202E !important;
+}
 
 .add {
-  background-color: #4CAF50;
+  background-color: #4761CC;
   border: none;
   color: white;
   padding: 13px 20px;
@@ -136,17 +256,25 @@ input[type=submit]:hover {
 }
 
 #submitGame {
-  margin-top: 20px;
-  margin-bottom: 50px;
-  background-color: #4CAF50;
+  background-color: #4761CC;
   border: none;
   color: white;
   padding: 13px 20px;
-  width: 100%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   border-radius: 4px;
+  float: right;
   font-weight: bold;
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+/* --------------- Media Queries --------------- */
+
+@media screen and (max-width: 992px) {
+  #myInput {
+    width: 100%;
+  }
 }

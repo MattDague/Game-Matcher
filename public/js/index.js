@@ -54,125 +54,124 @@ var refreshExamples = function () {
 
       return $li;
     });
-
-    $exampleList.empty();
-    $exampleList.append($examples);
   });
-};
 
-// handleFormSubmit is called whenever we submit a new example
-// Save the new example to the db and refresh the list
-var handleFormSubmit = function (event) {
-  event.preventDefault();
+  // handleFormSubmit is called whenever we submit a new example
+  // Save the new example to the db and refresh the list
+  var handleFormSubmit = function (event) {
+    event.preventDefault();
 
-  var example = {
-    text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
+    var example = {
+      text: $exampleText.val().trim(),
+      description: $exampleDescription.val().trim()
+    };
+
+    if (!(example.text && example.description)) {
+      alert("You must enter an example text and description!");
+      return;
+    }
+
+    API.saveExample(example).then(function () {
+      refreshExamples();
+    });
+
+    $exampleText.val("");
+    $exampleDescription.val("");
   };
 
-  if (!(example.text && example.description)) {
-    alert("You must enter an example text and description!");
-    return;
-  }
+  // handleDeleteBtnClick is called when an example's delete button is clicked
+  // Remove the example from the db and refresh the list
+  var handleDeleteBtnClick = function () {
+    var idToDelete = $(this)
+      .parent()
+      .attr("data-id");
 
-  API.saveExample(example).then(function () {
-    refreshExamples();
-  });
+    API.deleteExample(idToDelete).then(function () {
+      refreshExamples();
+    });
+  };
 
-  $exampleText.val("");
-  $exampleDescription.val("");
-};
+  // Add event listeners to the submit and delete buttons
+  $submitBtn.on("click", handleFormSubmit);
+  $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
-// handleDeleteBtnClick is called when an example's delete button is clicked
-// Remove the example from the db and refresh the list
-var handleDeleteBtnClick = function () {
-  var idToDelete = $(this)
-    .parent()
-    .attr("data-id");
-
-  API.deleteExample(idToDelete).then(function () {
-    refreshExamples();
-  });
-};
-
-// Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
-
-// Searches for games in the table
-function searchGames() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 1; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[1];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
+  // Searches for games in the table
+  function searchGames() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 1; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[1];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
       }
     }
   }
-}
 
-function userGames(userGames) {
-  $.ajax({
-    method: "PUT",
-    url: "/api/videogames",
-    data: { games: userGames }
-  });
-}
-
-// Submitting and adding games to userDB
-$("#submitGame").click(function () {
-  var arr = [];
-  $.each($(".vgcb:checked"), function () {
-    if (arr.length < 5) {
-      var gameId = this.value;
-      arr.push(gameId);
-    }
-    console.log(arr);
-  });
-  userGames(arr);
-});
-
-$('#addGameSubmit').on('click', function (event) {
-  event.preventDefault();
-  var newGame = {
-    name: $('#enterGameTitle').val(),
-    platform: $("#platform").val(),
-    year: $("#enterReleaseDate").val(),
-    genre: $("#genre").val(),
-    score: 0,
-    developer: $("#enterDeveloper").val(),
-    rating: 0
-
+  function userGames(userGames) {
+    $.ajax({
+      method: "PUT",
+      url: "/api/videogames",
+      data: { games: userGames }
+    }).then(function (submitLink) {
+      window.location.href = "/recommendations";
+    });
   }
-  $.ajax({
-    method: "POST",
-    url: "/api/videogames",
-    data: newGame
-  })
-.then(function (cb) {
-    if (cb) {
-      console.log(cb);
-      $("addGameModal").modal("hide");
-      window.location.href = "/dashboard";
 
+  // Submitting and adding games to userDB
+  $("#submitGame").click(function () {
+    var arr = [];
+    $.each($(".vgcb:checked"), function () {
+      if (arr.length < 5) {
+        var gameId = this.value;
+        arr.push(gameId);
+      }
+      console.log(arr);
+    });
+    userGames(arr);
+  });
+
+  $('#addGameSubmit').on('click', function (event) {
+    event.preventDefault();
+    var newGame = {
+      name: $('#enterGameTitle').val(),
+      platform: $("#platform").val(),
+      year: $("#enterReleaseDate").val(),
+      genre: $("#genre").val(),
+      score: 0,
+      developer: $("#enterDeveloper").val(),
+      rating: 0
 
     }
-});
+    $.ajax({
+      method: "POST",
+      url: "/api/videogames",
+      data: newGame
+    })
+      .then(function (cb) {
+        if (cb) {
+          console.log(cb);
+          $("addGameModal").modal("hide");
+          window.location.href = "/dashboard";
 
 
-// $("#gameDBAdd").click(function() {
+        }
+      });
 
-//   userGames(arr);
-// });
 
-//   userGames(arr);
-// }
-});
+    // $("#gameDBAdd").click(function() {
+
+    //   userGames(arr);
+    // });
+
+    //   userGames(arr);
+    // }
+  });
+};

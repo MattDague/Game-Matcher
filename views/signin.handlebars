@@ -1,19 +1,41 @@
-<!DOCTYPE html>
-<html>
- 
-<head>
-    <title></title>
-</head>
- 
-<body>
-    <form id="signin" name="signin" method="post" action="signin">
-        <label for="username">Username</label>
-        <input class="text" name="username" type="text" />
-        <label for="password">Password</label>
-        <input name="password" type="password" />
-        <input class="btn" type="submit" value="Sign In" />
-    </form>
- 
+ <body>
+     <div class="navdiv">
+        <nav class="navbar navbar-inverse navbar-dark bg-dark mb-1">
+            <div class="container-fluid">
+
+                <div class="navbar-header">
+                    <a class="navbar-brand">Game Matcher</a>
+                </div>
+
+                <div style="display: inline-block;">
+                    {{!-- <ul class="nav navbar-nav">
+                        <li><a href="#">Login / Sign up</a>
+                        </li>
+                        <li><a href="#">Recommendations</a>
+                        </li>
+                        <li><a href="#">Account</a>
+                        </li>
+                    </ul> --}}
+                </div>
+
+            </div>
+        </nav>
+    </div>
+    <div class="wrapper">
+        <h1 class="titleTag">Welcome Gamer</h1>
+        <h4 class="tagLine">Would you kindly log in to access the site</h4>
+
+        <form class="formBlock" id="signin" name="signin" method="post" action="signin">
+            <input class="inputField text" type="text" name="username" placeholder="user name"><br>
+            <input class="inputField" type="password" name="password" placeholder="password"><br><br>
+            <input class="subBtn btn" type="submit" value="Sign In">
+        </form>
+        <div class="strike">
+            <span>or</span>
+        </div>
+        <a href="/signup">
+        <input class="suBtn" id="signUpBtn" type="submit" value="Sign Up"></a>
+        <h5>You can sign up quite easily to become a member</h5>
+
+    </div>
 </body>
- 
-</html>
