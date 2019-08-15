@@ -24,13 +24,17 @@
     </div>
 
     <div class="wrapper">
+                <h1>Game Matcher</h1>
+        <p>Would you kindly create an account to access the site</p>
+
     <form id="signup" class="formBlock" name="signup" method="post" action="/signup">
-        {{!-- <label for="username">Username</label> --}}
-        <input class="text inputField" name="username" type="text" placeholder="User Name"/>
-        {{!-- <label for="password">Password</label> --}}
-        <input class="inputField" name="password" type="password" placeholder="password" />
-        <input class="subBtn btn" type="submit" value="Sign Up" />
+        <input class="inputField" name="username" type="name" placeholder="Create a username"/>
+        <input class="inputField" name="password" type="password" placeholder="Create a password" />
+        <input class="inputBtn" type="submit" value="Sign Up">
     </form>
+    <p id="registerText">Already have an account?</p>
+        <a href="/signin">
+        <input class="inputBtn" type="submit" value="Sign In"></a>
     </div>
 </body>
  
