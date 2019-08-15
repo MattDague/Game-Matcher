@@ -83,18 +83,6 @@
 
         <!-- a Bootstrap row with columns -->
         <h2 id="left">Recommendations</h2>
-
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Actions
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Delete</a>
-                <a class="dropdown-item" href="#">Add to library</a>
-
-            </div>
-        </div>
         </br>
         <div class="row">
 
@@ -181,7 +169,6 @@
                 <h2>Your game library</h2>
             </div>
             <div class="col-4 text-right">
-                <small>Add more?</small>
                 <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
                         View game list
                       </button>
@@ -190,83 +177,20 @@
         </div>
         </br>
 
-
         <div class="row">
             {{#each games}}
             <div class="col-lg-3">
                 <div class="card">
-                    <img src="placeholder_img.png" class="card-img-top" alt="...">
+                    <img src="{{img}}" class="card-img-top gameImage" >
                     <div class="card-body">
                         <h5 class="card-title">{{name}}</h5>
                         <p class="card-text"><strong>{{platform}}</strong></p>
                         <p class="card-text"><strong><strong>{{year}}</strong></strong></p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                Select
-                            </label>
-                        </div>
-
                     </div>
                 </div>
             </div>
             {{/each}}
-            {{!-- <div class="col-lg-3">
-                <div class="card">
-                    <img src="placeholder_img.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Game Title</h5>
-                        <p class="card-text"><strong>Platform:</strong></p>
-                        <p class="card-text"><strong><strong>Rating:</strong></strong></p>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                Select
-                            </label>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card">
-                    <img src="placeholder_img.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Game Title</h5>
-                        <p class="card-text"><strong>Platform:</strong></p>
-                        <p class="card-text"><strong><strong>Rating:</strong></strong></p>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                Select
-                            </label>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card">
-                    <img src="placeholder_img.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Game Title</h5>
-                        <p class="card-text"><strong>Platform:</strong></p>
-                        <p class="card-text"><strong><strong>Rating:</strong></strong></p>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                Select
-                            </label>
-                        </div>
-
-                    </div>
-                </div>
-            </div> --}}
-
-
+           
 
         </div>
         </br>
