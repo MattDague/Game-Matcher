@@ -1,32 +1,19 @@
-/* ======================== Global Formatting ===================== */
-
-body {
-    background-color: white;
-    width: 100%;
-    margin: auto;
-    font-family: 'Lato', sans-serif;
+.list-group-item {
+  line-height: 2.5;
 }
+
 
 .wrapper {
-    margin-top: 20px !important;
-    padding: 2rem;
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    flex: 1;
+  margin-top: 20px !important;
+  padding: 2rem;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  flex: 1;
 }
-
-h1 {
-    font-weight: 1200;
-}
-
-
-/* ===================== End of Global styles ===================== */
-
-
-/* ====================== Navbar formatting ======================= */
 
 .navbar .container-fluid>.navbar-header {
+<<<<<<< HEAD
     /* background-color: #344; */
     color: white;
     float: left;
@@ -44,82 +31,111 @@ a.navbar-brand {
     margin: 5px;
     /* position: relative; */
     display: inline;
+=======
+  /* background-color: #444; */
+  color: white;
+  float: left;
+  margin-right: 10px;
+  height: 75px;
+}
+
+a.navbar-brand {
+  padding-top: 25px;
+>>>>>>> c89af4e92cc0e7dc4ea1242ecbe97bf301603f24
 }
 
 .nav>li {
-    float: left;
-    color: white;
-    text-decoration: none
+  float: left;
+  color: white;
+  text-decoration: none
 }
 
 a {
-    color: white !important;
-    padding: 10px;
+  color: white !important;
+  padding: 10px;
 }
 
 a:hover {
-    color: #ffd600;
+  color: #ffd600;
 }
 
+body {
+  background-color: #F4F6F9 !important;
+}
 
-/* ======================= end of Navbar formatting ======================= */
+h1 {
+  color: #09202E !important;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
 
+h2 {
+  color: #09202E !important;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: bold !important;
+}
 
-/* ========================= Table Formatting ===================== */
-
-.list-group-item {
-    line-height: 2.5;
+p {
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 td {
-    display: table-cell;
-    vertical-align: inherit;
-    border-left: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    padding: 8px;
+  display: table-cell;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #09202E;
+  vertical-align: inherit;
+  border-bottom: 1px solid #eee;
+  padding: 8px;
+  background-color: #fff;
 }
 
 thead th {
-    display: table-header-group;
-    vertical-align: middle;
-    border-color: inherit;
-    border-right: 1px solid #eee;
-    width: 100%;
-    position: -webkit-sticky;
-    /* for Safari */
-    position: sticky;
-    top: 0;
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+  width: 100%;
+  position: -webkit-sticky;
+  /* for Safari */
+  position: sticky;
+  top: 0;
 }
 
 th {
+<<<<<<< HEAD
     background-color: #344;
     color: white;
     padding: 8px;
+=======
+  background-color: #515865;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: bold !important;
+  color: white;
+  padding: 8px;
+>>>>>>> c89af4e92cc0e7dc4ea1242ecbe97bf301603f24
 }
 
 th th:first-child {
-    left: 0;
-    z-index: 1;
+  left: 0;
+  z-index: 1;
 }
 
 tbody {
-    display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit;
-    border-right: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    left: 0;
-    width: 100%;
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+  border-bottom: 1px solid #eee;
+  left: 0;
+  width: 100%;
 }
 
 tr {
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
-    width: 100%;
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+  width: 100%;
 }
 
 table {
+<<<<<<< HEAD
     display: table;
     border-collapse: separate;
     border-color: grey;
@@ -167,22 +183,45 @@ select {
     margin: 7.5px;
     border: 1px solid #344;
     border-radius: 5px;
+=======
+  display: table;
+  border-collapse: separate;
+  border-color: grey;
+  width: 100%;
+  overflow-y: scroll;
+  height: 548px;
+  display: flex;
+  border-spacing: 0;
+  background-color: #fff;
+  margin-bottom: 50px;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+>>>>>>> c89af4e92cc0e7dc4ea1242ecbe97bf301603f24
 }
 
 .form-check-input {
-    float: left;
+  float: left;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 #checkbox {
-    padding-left: 20px;
-    padding-bottom: 35px;
-    margin: 0;
+  padding-left: 20px;
+  padding-bottom: 35px;
+  margin: 0;
 }
 
-.form-check-label {
-    float: left;
+input[type=text], select {
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
+<<<<<<< HEAD
 .subBtn {
     background-color: #344;
     color: white;
@@ -210,47 +249,54 @@ select {
     width: 500px;
     float: left;
     margin-bottom: 10px;
+=======
+select.form-control:not([size]):not([multiple]) {
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
-
-/* ============================= Manny edits ================================== */
-
-
-/* strike thru line */
-
-.strike {
-    display: block;
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap;
-    margin-top: 5%;
+.form-check-label {
+  float: left;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.strike>span {
-    position: relative;
-    display: inline-block;
+.form-control-label {
+  font-family: 'IBM Plex Sans', sans-serif;
+>>>>>>> c89af4e92cc0e7dc4ea1242ecbe97bf301603f24
 }
 
-.strike>span:before,
-.strike>span:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 1240%;
-    height: 1px;
-    background: rgb(36, 35, 35);
+.form-control {
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.strike>span:before {
-    right: 100%;
-    margin-right: 15px;
+input[type=submit] {
+  width: 100%;
+  background-color: #4761CC;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.strike>span:after {
-    left: 100%;
-    margin-left: 15px;
+.btn-primary:active:focus {
+  background-color: #4761CC!important;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: bold !important;
 }
 
+label {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #09202E;
+}
+
+table {
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+<<<<<<< HEAD
 .suBtn {
     margin-top: 5%;
     background-color: #344;
@@ -268,40 +314,59 @@ select {
     padding: 1rem;
     margin: 7.5;
     border-radius: 5px;
+=======
+input[type=submit]:hover {
+  background-color: #45a049;
 }
 
-
-/* ============================= Page specific formatting ========================= */
+#myInput {
+  width: 500px;
+  float: left;
+  margin-bottom: 15px;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #09202E;
+>>>>>>> c89af4e92cc0e7dc4ea1242ecbe97bf301603f24
+}
 
 #instructionText {
-    width: 645px;
-    margin-bottom: 30px;
+  width: 645px;
+  margin-bottom: 30px;
 }
 
 .topSection {
-    margin-top: 50px;
-    margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 .addGame {
+<<<<<<< HEAD
     margin-top: 30px;
     margin-bottom: 10%;
+=======
+  margin-top: 30px;
+>>>>>>> c89af4e92cc0e7dc4ea1242ecbe97bf301603f24
 }
 
-.add {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 13px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 4px;
-    float: right;
-    font-weight: bold;
+.btn:not([disabled]):not(.disabled) {
+  background-color: #4761CC;
+  border: none;
+  color: white;
+  padding: 13px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  float: right;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: bold !important;
 }
 
+<<<<<<< HEAD
 #submitGame {
     margin-top: 20px;
     margin-bottom: 75px;
@@ -316,21 +381,48 @@ select {
     font-size: 16px;
     border-radius: 4px;
     font-weight: bold;
+=======
+.modal-title {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: bold !important;
+  color: #09202E !important;
+>>>>>>> c89af4e92cc0e7dc4ea1242ecbe97bf301603f24
 }
 
+.add {
+  background-color: #4761CC;
+  border: none;
+  color: white;
+  padding: 13px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  float: right;
+  font-weight: bold;
+}
 
-/* ======================= End of Page specifics ========================= */
+#submitGame {
+  background-color: #4761CC;
+  border: none;
+  color: white;
+  padding: 13px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  float: right;
+  font-weight: bold;
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
 
+/* --------------- Media Queries --------------- */
 
-/* ============================== Footer ================================== */
-
-#sticky-footer {
-    position: fixed;
-    bottom: 0;
+@media screen and (max-width: 992px) {
+  #myInput {
     width: 100%;
-    color: white;
-    /* Set the fixed height of the footer here */
-    height: 75px;
-    /* line-height: 75px; */
-    /* Vertically center the text there */
+  }
 }
