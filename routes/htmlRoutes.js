@@ -10,6 +10,13 @@ module.exports = function(app) {
         res.render("signup");
     })
 
+    // Logout function 
+    app.get('/logout', function(req, res) {
+        req.logout();
+        res.redirect('/signin');
+    });
+
+
     app.get("/index", function(req, res) {
         db.Example.findAll({}).then(function(dbExamples) {
             res.render("index", {
