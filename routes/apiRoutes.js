@@ -8,18 +8,11 @@ module.exports = function(app) {
     });
   });
 
-  // app.get("/api/videogames/", function(req, res) {
-  //   db.sequelize.query("SELECT * FROM ")
-  //     .findOne({
-  //       include: [db.videogame],
-  //       where: {
-  //         username: req.params.user
-  //       }
-  //     })
-  //     .then(function(userGames) {
-  //       res.json(userGames);
-  //     });
-  // });
+  app.get("/api/userlist", function(req, res) {
+    db.user.findAll().then(function(userData) {
+      res.json(userData);
+    });
+  });
 
   // post new videogame to database
   app.post("/api/videogames", function(req, res) {

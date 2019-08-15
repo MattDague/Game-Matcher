@@ -53,7 +53,7 @@
         {{!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> --}}
 
             <!-- Our brand / logo -->
-            <a class="navbar-brand" href="#">GameMatcher</a>
+            
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -82,84 +82,23 @@
 
 
         <!-- a Bootstrap row with columns -->
-        <h2 id="left">Recommendations</h2>
+        <h2 id="left">Heres five games recommened by another user! Check them out!</h2>
         </br>
         <div class="row">
-
-        
+        {{#each matches}}
             <div class="col-lg-3">
                 <div class="card">
                     <img src="https://via.placeholder.com/220x310" class="card-img-top" />
                     <div class="card-body">
-                        <h5 class="card-title">Game Title</h5>
-                        <p class="card-text"><strong>Platform:</strong></p>
-                        <p class="card-text"><strong><strong>Rating:</strong></strong></p>
-                        <p class="card-text"><strong>Recommended by:</strong></p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                Select
-                            </label>
-                        </div>
+                        <h5 class="card-title">{{name}}</h5>
+                        <p class="card-text"><strong>{{platform}}</strong></p>
+                        <p class="card-text"><strong><strong>{{year}}</strong></strong></p>
+                       
 
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
-                <div class="card">
-                    <img src="placeholder_img.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Game Title</h5>
-                        <p class="card-text"><strong>Platform:</strong></p>
-                        <p class="card-text"><strong><strong>Rating:</strong></strong></p>
-                        <p class="card-text"><strong>Recommended by:</strong></p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                Select
-                            </label>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card">
-                    <img src="placeholder_img.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Game Title</h5>
-                        <p class="card-text"><strong>Platform:</strong></p>
-                        <p class="card-text"><strong><strong>Rating:</strong></strong></p>
-                        <p class="card-text"><strong>Recommended by:</strong></p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                Select
-                            </label>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card">
-                    <img src="placeholder_img.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Game Title</h5>
-                        <p class="card-text"><strong>Platform:</strong></p>
-                        <p class="card-text"><strong><strong>Rating:</strong></strong></p>
-                        <p class="card-text"><strong>Recommended by:</strong></p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                Select
-                            </label>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
+            {{/each}}
 
 
         </div>
@@ -181,6 +120,7 @@
             {{#each games}}
             <div class="col-lg-3">
                 <div class="card">
+                    <img src="https://via.placeholder.com/220x310" class="card-img-top" />
                     <img src="{{img}}" class="card-img-top gameImage" >
                     <div class="card-body">
                         <h5 class="card-title">{{name}}</h5>

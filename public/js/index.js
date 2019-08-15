@@ -30,7 +30,6 @@ var API = {
   }
 };
 
-
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshExamples = function() {
   API.getExamples().then(function(data) {
@@ -136,30 +135,28 @@ $("#submitGame").click(function() {
     }
     console.log(arr);
   });
-  userGames(arr);
+  if (arr.length >= 5) {
+    userGames(arr);
+  } else if (arr.length < 5) {
+    arr = [];
+    alert("addmoregamez");
+  }
 });
 
-$('#gameDBAdd').on('click', function(event) {
+$("#gameDBAdd").on("click", function(event) {
   event.preventDefault();
   var newGame = {
-    name: $('#enterGameTitle').val(), 
+    name: $("#enterGameTitle").val(),
     platform: $("#platform").val(),
     year: $("#enterReleaseDate").val(),
     genre: $("#genre").val(),
     score: 0,
-    developer: $("#enterDeveloper").val(), 
+    developer: $("#enterDeveloper").val(),
     rating: 0
-
-  }
+  };
   $.ajax({
     method: "POST",
     url: "/api/videogames",
     data: newGame
+  });
 });
-
-});
-
-// $("#gameDBAdd").click(function() {
-
-//   userGames(arr);
-// });
