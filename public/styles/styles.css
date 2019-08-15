@@ -27,7 +27,7 @@ h1 {
 /* ====================== Navbar formatting ======================= */
 
 .navbar .container-fluid>.navbar-header {
-    /* background-color: #444; */
+    /* background-color: #344; */
     color: white;
     float: left;
     margin-right: 10px;
@@ -39,7 +39,7 @@ a.navbar-brand {
 }
 
 .navbar .navbar-nav {
-    /* background-color: #444; */
+    /* background-color: #344; */
     float: left;
     margin: 5px;
     /* position: relative; */
@@ -92,7 +92,7 @@ thead th {
 }
 
 th {
-    background-color: #444;
+    background-color: #344;
     color: white;
     padding: 8px;
 }
@@ -138,7 +138,7 @@ table {
 
 input[type=submit] {
     width: 50%;
-    background-color: #444;
+    background-color: #344;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -156,7 +156,7 @@ select {
     width: 50%;
     padding: .5 rem;
     display: inline-block;
-    border: 1px solid #444;
+    border: 1px solid #344;
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -165,7 +165,7 @@ select {
     width: 50%;
     padding: .5rem;
     margin: 7.5px;
-    border: 1px solid #444;
+    border: 1px solid #344;
     border-radius: 5px;
 }
 
@@ -184,7 +184,7 @@ select {
 }
 
 .subBtn {
-    background-color: #444;
+    background-color: #344;
     color: white;
     width: 50%;
     padding: .5 rem;
@@ -194,7 +194,7 @@ select {
 
 .suBtn {
     margin-top: 5%;
-    background-color: #444;
+    background-color: #344;
     color: white;
     width: 50%;
     padding: .5 rem;
@@ -253,7 +253,7 @@ select {
 
 .suBtn {
     margin-top: 5%;
-    background-color: #444;
+    background-color: #344;
     color: white;
     width: 50%;
     padding: 1rem;
@@ -262,7 +262,7 @@ select {
 }
 
 .subBtn {
-    background-color: #444;
+    background-color: #344;
     color: white;
     width: 50%;
     padding: 1rem;
@@ -305,7 +305,7 @@ select {
 #submitGame {
     margin-top: 20px;
     margin-bottom: 75px;
-    background-color: #444;
+    background-color: #344;
     border: none;
     color: white;
     padding: 13px 20px;
