@@ -10,7 +10,11 @@ module.exports = function(app) {
     res.render("signup");
   });
 
-  // Logout function 
+  app.get("/signup", function(req, res) {
+    res.render("signup");
+  });
+
+  // Logout function
   app.get("/logout", function(req, res) {
     req.logout();
     res.redirect("/signin");
