@@ -8,7 +8,7 @@
     },
     "test": {
         "username": "root",
-        "password": "",
+        "password": "marsball",
         "database": "videogame_db",
         "host": "localhost",
         "dialect": "mysql",
