@@ -10,24 +10,24 @@ module.exports = function(app) {
     res.render("signup");
   });
 
+  app.get("/signup", function(req, res) {
+    res.render("signup");
+  });
 
-    // Logout function 
-    app.get('/logout', function(req, res) {
-        req.logout();
-        res.redirect('/signin');
+  // Logout function
+  app.get("/logout", function(req, res) {
+    req.logout();
+    res.redirect("/signin");
+  });
+
+  app.get("/index", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("index", {
+        msg: "Welcome!",
+        examples: dbExamples
+      });
     });
-
-
-    app.get("/index", function(req, res) {
-        db.Example.findAll({}).then(function(dbExamples) {
-            res.render("index", {
-                msg: "Welcome!",
-                examples: dbExamples
-            });
-        });
-
-    });
-  
+  });
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {

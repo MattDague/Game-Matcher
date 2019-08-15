@@ -24,9 +24,9 @@ function userGames(userGames) {
     data: { games: userGames }
   });
 }
-$("#submitGame").click(function () {
+$("#submitGame").click(function() {
   var arr = [];
-  $.each($(".vgcb:checked"), function () {
+  $.each($(".vgcb:checked"), function() {
     if (arr.length < 5) {
       var gameId = this.value;
       arr.push(gameId);
@@ -39,12 +39,13 @@ $("#submitGame").click(function () {
     arr = [];
     alert("addmoregamez");
   }
+  window.location.href = "/recommendations";
 });
 
-$('#addGameSubmit').on('click', function (event) {
+$("#addGameSubmit").on("click", function (event) {
   event.preventDefault();
   var newGame = {
-    name: $('#enterGameTitle').val(),
+    name: $("#enterGameTitle").val(),
     platform: $("#platform").val(),
     year: $("#enterReleaseDate").val(),
     genre: $("#genre").val(),
@@ -59,6 +60,6 @@ $('#addGameSubmit').on('click', function (event) {
     url: "/api/videogames",
     data: newGame
   });
-
-  $('#addGameModal').modal('hide')
+  $("#addGameModal").modal("hide");
+  location.reload();
 });
