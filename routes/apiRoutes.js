@@ -41,7 +41,7 @@ module.exports = function(app) {
           game2: parseInt(req.body.games[1]),
           game3: parseInt(req.body.games[2]),
           game4: parseInt(req.body.games[3]),
-          game5: parseInt(req.body.games[4])
+          // game5: parseInt(req.body.games[4])
         },
         {
           where: {
