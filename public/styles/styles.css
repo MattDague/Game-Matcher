@@ -92,7 +92,7 @@ thead th {
 }
 
 th {
-    background-color: black;
+    background-color: #444;
     color: white;
     padding: 8px;
 }
@@ -202,6 +202,10 @@ select {
     border-radius: 5px;
 }
 
+.btn-dark {
+    background-color: #444 !important;
+}
+
 #myInput {
     width: 500px;
     float: left;
@@ -281,6 +285,7 @@ select {
 
 .addGame {
     margin-top: 30px;
+    margin-bottom: 10%;
 }
 
 .add {
@@ -299,12 +304,12 @@ select {
 
 #submitGame {
     margin-top: 20px;
-    margin-bottom: 50px;
-    background-color: #4CAF50;
+    margin-bottom: 75px;
+    background-color: #444;
     border: none;
     color: white;
     padding: 13px 20px;
-    width: 100%;
+    width: 50%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
