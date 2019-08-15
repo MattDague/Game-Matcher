@@ -127,7 +127,6 @@ function userGames(userGames) {
   });
 }
 
-// Submitting and adding games to userDB
 $("#submitGame").click(function() {
   var arr = [];
   $.each($(".vgcb:checked"), function() {
