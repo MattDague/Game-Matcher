@@ -5,7 +5,7 @@ var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function(example) {
+  saveExample: function (example) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
@@ -15,13 +15,13 @@ var API = {
       data: JSON.stringify(example)
     });
   },
-  getExamples: function() {
+  getExamples: function () {
     return $.ajax({
       url: "api/examples",
       type: "GET"
     });
   },
-  deleteExample: function(id) {
+  deleteExample: function (id) {
     return $.ajax({
       url: "api/examples/" + id,
       type: "DELETE"
@@ -29,9 +29,9 @@ var API = {
   }
 };
 // refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
+var refreshExamples = function () {
+  API.getExamples().then(function (data) {
+    var $examples = data.map(function (example) {
       var $a = $("<a>")
         .text(example.text)
         .attr("href", "/example/" + example.id);
@@ -53,7 +53,7 @@ var refreshExamples = function() {
 };
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
-var handleFormSubmit = function(event) {
+var handleFormSubmit = function (event) {
   event.preventDefault();
   var example = {
     text: $exampleText.val().trim(),
@@ -63,7 +63,7 @@ var handleFormSubmit = function(event) {
     alert("You must enter an example text and description!");
     return;
   }
-  API.saveExample(example).then(function() {
+  API.saveExample(example).then(function () {
     refreshExamples();
   });
   $exampleText.val("");
@@ -71,11 +71,11 @@ var handleFormSubmit = function(event) {
 };
 // handleDeleteBtnClick is called when an example's delete button is clicked
 // Remove the example from the db and refresh the list
-var handleDeleteBtnClick = function() {
+var handleDeleteBtnClick = function () {
   var idToDelete = $(this)
     .parent()
     .attr("data-id");
-  API.deleteExample(idToDelete).then(function() {
+  API.deleteExample(idToDelete).then(function () {
     refreshExamples();
   });
 };
@@ -108,9 +108,9 @@ function userGames(userGames) {
     data: { games: userGames }
   });
 }
-$("#submitGame").click(function() {
+$("#submitGame").click(function () {
   var arr = [];
-  $.each($(".vgcb:checked"), function() {
+  $.each($(".vgcb:checked"), function () {
     if (arr.length < 5) {
       var gameId = this.value;
       arr.push(gameId);
@@ -119,24 +119,23 @@ $("#submitGame").click(function() {
   });
   userGames(arr);
 });
-
-$("#gameDBAdd").on("click", function(event) {
+$('#addGameSubmit').on('click', function (event) {
   event.preventDefault();
   var newGame = {
-    name: $("#enterGameTitle").val(),
+    name: $('#enterGameTitle').val(),
     platform: $("#platform").val(),
     year: $("#enterReleaseDate").val(),
     genre: $("#genre").val(),
     score: 0,
     developer: $("#enterDeveloper").val(),
-    rating: 0,
-    img: $("#enterImg").val()
+    rating: 0
   };
   $.ajax({
     method: "POST",
     url: "/api/videogames",
     data: newGame
   });
+  $('#addGameModal').modal('hide')
 });
 // $("#gameDBAdd").click(function() {
 //   userGames(arr);
