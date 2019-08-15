@@ -23,6 +23,7 @@ module.exports = function(app) {
 
   // post new videogame to database
   app.post("/api/videogames", function(req, res) {
+    console.log(req.body);
     db.videogame
       .create({
         name: req.body.name,
