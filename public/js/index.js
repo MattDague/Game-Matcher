@@ -119,22 +119,24 @@ $("#submitGame").click(function() {
   });
   userGames(arr);
 });
-$('#gameDBAdd').on('click', function(event) {
+
+$("#gameDBAdd").on("click", function(event) {
   event.preventDefault();
   var newGame = {
-    name: $('#enterGameTitle').val(), 
+    name: $("#enterGameTitle").val(),
     platform: $("#platform").val(),
     year: $("#enterReleaseDate").val(),
     genre: $("#genre").val(),
     score: 0,
-    developer: $("#enterDeveloper").val(), 
-    rating: 0
-  }
+    developer: $("#enterDeveloper").val(),
+    rating: 0,
+    img: $("#enterImg").val()
+  };
   $.ajax({
     method: "POST",
     url: "/api/videogames",
     data: newGame
-});
+  });
 });
 // $("#gameDBAdd").click(function() {
 //   userGames(arr);
