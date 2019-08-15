@@ -14,6 +14,25 @@
 </head>
 
 <body>
+    <div class="navdiv">
+       <nav class="navbar navbar-inverse navbar-dark bg-dark mb-1">
+           <div class="container-fluid">
+               <div class="navbar-header">
+                   <a class="navbar-brand" href="/recommendations">Game Matcher</a>
+               </div>
+               <div style="display: inline-block;">
+                   <ul class="nav navbar-nav">
+                       <li><a href="/recommendations">Recommendations</a>
+                       </li>
+                       <li><a href="/api/videogames">API Lists</a>
+                       </li>
+                       <li><a href="/logout">Logout</a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+       </nav>
+    </div>
 
     <div class="container">
         <div class="topSection">
@@ -21,6 +40,8 @@
             <div class="addGame">
                 <input type="text" id="myInput" onkeyup="searchGames()" placeholder="Search for games"
                     title="Type in a name">
+                            <button id="submitGame">Submit</button>
+
                 <!-- Button trigger modal -->
                 <button type="button" class="add btn btn-primary" data-toggle="modal" data-target="#addGameModal">
                     Add new game
@@ -56,7 +77,6 @@
             {{/each}}
 
         </table>
-        <button id="submitGame">Submit</button>
 
     </div>
 
