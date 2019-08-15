@@ -27,15 +27,15 @@ function userGames(userGames) {
 $("#submitGame").click(function() {
   var arr = [];
   $.each($(".vgcb:checked"), function() {
-    if (arr.length < 5) {
+    if (arr.length < 4) {
       var gameId = this.value;
       arr.push(gameId);
     }
     console.log(arr);
   });
-  if (arr.length >= 5) {
+  if (arr.length >= 4) {
     userGames(arr);
-  } else if (arr.length < 5) {
+  } else if (arr.length < 4) {
     arr = [];
     alert("addmoregamez");
   }

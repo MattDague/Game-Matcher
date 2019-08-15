@@ -59,14 +59,14 @@ exports.recommendations = function(req, res) {
                   .then(function(response) {
                     matchArr.push(response[0].dataValues);
 
-                    db.videogame
-                      .findAll({
-                        where: {
-                          id: userData[randUser].game5
-                        }
-                      })
-                      .then(function(response) {
-                        matchArr.push(response[0].dataValues);
+                    // db.videogame
+                    //   .findAll({
+                    //     where: {
+                    //       id: userData[randUser].game5
+                    //     }
+                    //   })
+                    //   .then(function(response) {
+                    //     matchArr.push(response[0].dataValues);
 
                         /////////////////////////////////////////////////////////////////////////////////
                         var userGamesArr = [];
@@ -105,16 +105,16 @@ exports.recommendations = function(req, res) {
                                           response[0].dataValues
                                         );
 
-                                        db.videogame
-                                          .findAll({
-                                            where: {
-                                              id: req.user.game5
-                                            }
-                                          })
-                                          .then(function(response) {
-                                            userGamesArr.push(
-                                              response[0].dataValues
-                                            );
+                                        // db.videogame
+                                        //   .findAll({
+                                        //     where: {
+                                        //       id: req.user.game5
+                                        //     }
+                                        //   })
+                                        //   .then(function(response) {
+                                        //     userGamesArr.push(
+                                        //       response[0].dataValues
+                                        //     );
 
                                             res.render("recommendations", {
                                               games: userGamesArr,
@@ -131,8 +131,8 @@ exports.recommendations = function(req, res) {
                   });
               });
           });
-      });
-  });
+  //     });
+  // });
 };
 
 exports.index = function(req, res) {
