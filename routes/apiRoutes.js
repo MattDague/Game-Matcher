@@ -25,7 +25,8 @@ module.exports = function(app) {
         genre: req.body.genre,
         score: req.body.score,
         developer: req.body.developer,
-        rating: req.body.rating
+        rating: req.body.rating,
+        img: req.body.img
       })
       .then(function(dbVideogame) {
         res.json(dbVideogame);
