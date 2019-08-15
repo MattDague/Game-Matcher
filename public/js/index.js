@@ -117,24 +117,34 @@ $("#submitGame").click(function () {
     }
     console.log(arr);
   });
-  userGames(arr);
+  if (arr.length >= 5) {
+    userGames(arr);
+  } else if (arr.length < 5) {
+    arr = [];
+    alert("addmoregamez");
+  }
 });
+
 $('#addGameSubmit').on('click', function (event) {
   event.preventDefault();
   var newGame = {
     name: $('#enterGameTitle').val(),
+
     platform: $("#platform").val(),
     year: $("#enterReleaseDate").val(),
     genre: $("#genre").val(),
     score: 0,
     developer: $("#enterDeveloper").val(),
     rating: 0
+
   }
+
   $.ajax({
     method: "POST",
     url: "/api/videogames",
     data: newGame
   });
+
   $('#addGameModal').modal('hide')
 });
 // $("#gameDBAdd").click(function() {
