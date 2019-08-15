@@ -35,11 +35,11 @@ $("#submitGame").click(function() {
   });
   if (arr.length >= 5) {
     userGames(arr);
+    window.location.href = "/recommendations";
   } else if (arr.length < 5) {
     arr = [];
     alert("addmoregamez");
   }
-  window.location.href = "/recommendations";
 });
 
 $("#addGameSubmit").on("click", function (event) {
@@ -60,6 +60,5 @@ $("#addGameSubmit").on("click", function (event) {
     url: "/api/videogames",
     data: newGame
   });
-  $("#addGameModal").modal("hide");
   location.reload();
 });

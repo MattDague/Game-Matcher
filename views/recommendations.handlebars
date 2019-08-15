@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -26,55 +24,55 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-inverse navbar-dark bg-dark mb-1">
-  <div class="container-fluid">
+    <nav class="navbar navbar-inverse navbar-dark bg-dark mb-1">
+        <div class="container-fluid">
 
-    <div class="navbar-header">
-      <a class="navbar-brand">Game Matcher</a>
-    </div>
+            <div class="navbar-header">
+                <a class="navbar-brand">Game Matcher</a>
+            </div>
 
-    <div style="display: inline-block;">
-      <ul class="nav navbar-nav">
-        <li><a href="/dashboard">Dashboard</a>
-        </li>
-        <li><a href="/api/videogames">API Lists</a>
-        </li>
-        <li><a href="/logout">Logout</a>
-                        </li>
-      </ul>
-    </div>
+            <div style="display: inline-block;">
+                <ul class="nav navbar-nav">
+                    <li><a href="/dashboard">Dashboard</a>
+                    </li>
+                    <li><a href="/api/videogames">API Lists</a>
+                    </li>
+                    <li><a href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
 
-  </div>
-</nav>
+        </div>
+    </nav>
     <!-- Container Div -->
     <div class="container">
 
         <!-- Section 1: Navbar-->
         {{!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> --}}
 
-            <!-- Our brand / logo -->
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- Our brand / logo -->
 
-            <!-- Collapsible button -->
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ml-auto">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                    <!-- The links of our navbar -->
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
+        <!-- Collapsible button -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
+                <!-- The links of our navbar -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
 
-                    </li>
-                </ul>
-            </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+
+                </li>
+            </ul>
+        </div>
         </nav>
 
 
@@ -82,10 +80,11 @@
 
 
         <!-- a Bootstrap row with columns -->
-        <h2 id="left">Heres five games recommened by another user! Check them out!</h2>
+        <h2 id="left">Game Recommendations</h2>
+        <p>You received 5 game recommendations from similar gamers</p>
         </br>
         <div class="row">
-        {{#each matches}}
+            {{#each matches}}
             <div class="col-lg-3">
                 <div class="card">
                     <img src="https://via.placeholder.com/220x310" class="card-img-top" />
@@ -93,53 +92,52 @@
                         <h5 class="card-title">{{name}}</h5>
                         <p class="card-text"><strong>{{platform}}</strong></p>
                         <p class="card-text"><strong><strong>{{year}}</strong></strong></p>
-                       
-
                     </div>
+                    <br>
                 </div>
             </div>
             {{/each}}
-
-
         </div>
-    </br>
-        <div class="row">
-            <div class="col-8">
-                <h2>Your game library</h2>
-            </div>
-            <div class="col-4 text-right">
-                <button id="viewGameListBtn" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+        </br>
+
+        <div class="container gameLibrary">
+            <div class="row">
+                <div class="col-8">
+                    <h2>Your game library</h2>
+                </div>
+                <div class="col-4 text-right">
+                    <button onclick="window.location.href = '/dashboard';" type="button" class="btn"
+                        data-toggle="button" aria-pressed="false" autocomplete="off">
                         View game list
-                      </button>
-                
-            </div>
-        </div>
-        </br>
-
-        <div class="row">
-            {{#each games}}
-            <div class="col-lg-3">
-                <div class="card">
-                    <img src="https://via.placeholder.com/220x310" class="card-img-top" />
-                    <img src="{{img}}" class="card-img-top gameImage" >
-                    <div class="card-body">
-                        <h5 class="card-title">{{name}}</h5>
-                        <p class="card-text"><strong>{{platform}}</strong></p>
-                        <p class="card-text"><strong><strong>{{year}}</strong></strong></p>
-                    </div>
+                    </button>
                 </div>
             </div>
-            {{/each}}
-           
+
+            <div class="row">
+                {{#each games}}
+                <div class="col-lg-3">
+                    <div class="card">
+                        <img src="{{img}}" class="card-img-top gameImage">
+                        <div class="card-body">
+                            <h5 class="card-title">{{name}}</h5>
+                            <p class="card-text"><strong>{{platform}}</strong></p>
+                            <p class="card-text"><strong><strong>{{year}}</strong></strong></p>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
 
         </div>
-        </br>
-        <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-
-        <!-- Bootstrap's javascript file that allows the dropdown menu to work  -->
-        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
-<script src="/js/index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script src="/js/index.js"></script>
 </body>
 
 </html>
