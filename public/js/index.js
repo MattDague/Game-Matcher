@@ -60,6 +60,5 @@ $("#addGameSubmit").on("click", function (event) {
     url: "/api/videogames",
     data: newGame
   });
-  $("#addGameModal").modal("hide");
   location.reload();
 });

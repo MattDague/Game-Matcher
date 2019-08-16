@@ -1,16 +1,16 @@
 var exports = (module.exports = {});
 var db = require("../models");
 
-exports.signup = function(req, res) {
+exports.signup = function (req, res) {
   res.render("signup");
 };
 
-exports.signin = function(req, res) {
+exports.signin = function (req, res) {
   res.render("signin");
 };
 
-exports.dashboard = function(req, res) {
-  db.videogame.findAll({}).then(function(dbVideoGameData) {
+exports.dashboard = function (req, res) {
+  db.videogame.findAll({}).then(function (dbVideoGameData) {
     // console.log(dbVideoGameData);
     var vgObject = {
       games: dbVideoGameData
@@ -19,8 +19,8 @@ exports.dashboard = function(req, res) {
   });
 };
 
-exports.recommendations = function(req, res) {
-  db.user.findAll().then(function(userData) {
+exports.recommendations = function (req, res) {
+  db.user.findAll().then(function (userData) {
     var randUser = Math.floor(Math.random() * userData.length);
     if (userData[randUser].id === req.user.id) {
       randUser = Math.floor(Math.random() * userData.length);
@@ -32,7 +32,7 @@ exports.recommendations = function(req, res) {
           id: userData[randUser].game1
         }
       })
-      .then(function(response) {
+      .then(function (response) {
         matchArr.push(response[0].dataValues);
         db.videogame
           .findAll({
@@ -40,7 +40,7 @@ exports.recommendations = function(req, res) {
               id: userData[randUser].game2
             }
           })
-          .then(function(response) {
+          .then(function (response) {
             matchArr.push(response[0].dataValues);
             db.videogame
               .findAll({
@@ -48,7 +48,7 @@ exports.recommendations = function(req, res) {
                   id: userData[randUser].game3
                 }
               })
-              .then(function(response) {
+              .then(function (response) {
                 matchArr.push(response[0].dataValues);
                 db.videogame
                   .findAll({
@@ -56,7 +56,7 @@ exports.recommendations = function(req, res) {
                       id: userData[randUser].game4
                     }
                   })
-                  .then(function(response) {
+                  .then(function (response) {
                     matchArr.push(response[0].dataValues);
 
                     /////////////////////////////////////////////////////////////////////////////////
@@ -75,7 +75,7 @@ exports.recommendations = function(req, res) {
                               id: req.user.game2
                             }
                           })
-                          .then(function(response) {
+                          .then(function (response) {
                             userGamesArr.push(response[0].dataValues);
                             db.videogame
                               .findAll({
@@ -83,7 +83,7 @@ exports.recommendations = function(req, res) {
                                   id: req.user.game3
                                 }
                               })
-                              .then(function(response) {
+                              .then(function (response) {
                                 userGamesArr.push(response[0].dataValues);
                                 db.videogame
                                   .findAll({
