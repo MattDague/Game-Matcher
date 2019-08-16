@@ -59,21 +59,20 @@ exports.recommendations = function(req, res) {
                   .then(function(response) {
                     matchArr.push(response[0].dataValues);
 
-                    // db.videogame
-                    //   .findAll({
-                    //     where: {
-                    //       id: userData[randUser].game5
-                    //     }
-                    //   })
-                    //   .then(function(response) {
-                    //     matchArr.push(response[0].dataValues);
-
-                        /////////////////////////////////////////////////////////////////////////////////
-                        var userGamesArr = [];
+                    /////////////////////////////////////////////////////////////////////////////////
+                    var userGamesArr = [];
+                    db.videogame
+                      .findAll({
+                        where: {
+                          id: req.user.game1
+                        }
+                      })
+                      .then(function(response) {
+                        userGamesArr.push(response[0].dataValues);
                         db.videogame
                           .findAll({
                             where: {
-                              id: req.user.game1
+                              id: req.user.game2
                             }
                           })
                           .then(function(response) {
@@ -81,7 +80,7 @@ exports.recommendations = function(req, res) {
                             db.videogame
                               .findAll({
                                 where: {
-                                  id: req.user.game2
+                                  id: req.user.game3
                                 }
                               })
                               .then(function(response) {
@@ -89,41 +88,18 @@ exports.recommendations = function(req, res) {
                                 db.videogame
                                   .findAll({
                                     where: {
-                                      id: req.user.game3
+                                      id: req.user.game4
                                     }
                                   })
                                   .then(function(response) {
                                     userGamesArr.push(response[0].dataValues);
-                                    db.videogame
-                                      .findAll({
-                                        where: {
-                                          id: req.user.game4
-                                        }
-                                      })
-                                      .then(function(response) {
-                                        userGamesArr.push(
-                                          response[0].dataValues
-                                        );
 
-                                        // db.videogame
-                                        //   .findAll({
-                                        //     where: {
-                                        //       id: req.user.game5
-                                        //     }
-                                        //   })
-                                        //   .then(function(response) {
-                                        //     userGamesArr.push(
-                                        //       response[0].dataValues
-                                        //     );
-
-                                            res.render("recommendations", {
-                                              games: userGamesArr,
-                                              matches: matchArr
-                                            });
-                                            console.log(userGamesArr);
-                                            console.log(matchArr);
-                                          });
-                                      });
+                                    res.render("recommendations", {
+                                      games: userGamesArr,
+                                      matches: matchArr
+                                    });
+                                    console.log(userGamesArr);
+                                    console.log(matchArr);
                                   });
                               });
                           });
@@ -131,8 +107,8 @@ exports.recommendations = function(req, res) {
                   });
               });
           });
-  //     });
-  // });
+      });
+  });
 };
 
 exports.index = function(req, res) {
@@ -145,10 +121,8 @@ exports.logout = function(req, res) {
   });
 };
 
-
 exports.userlist = function(req, res) {
   db.user.findAll({}).then(function(userData) {
     res.json(userData);
   });
 };
-
