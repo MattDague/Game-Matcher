@@ -23,12 +23,12 @@ module.exports = function(sequelize, Sequelize) {
     },
     game4: {
       type: Sequelize.INTEGER
-    },
-    game5: {
-      type: Sequelize.INTEGER
     }
+    // ,
+    // game5: {
+    //   type: Sequelize.INTEGER
+    // }
   });
-
 
   return User;
 };

@@ -13,9 +13,7 @@
 
 .card-title {
   font-family: 'IBM Plex Sans', sans-serif;
-
 }
-
 
 .card-img-top {
   height: 350px;
@@ -51,16 +49,27 @@
   box-sizing: border-box;
 }
 
+a:not([href]):not([tabindex]) {
+  padding-top: 14px;
+}
+
 .navbar .container-fluid>.navbar-header {
   /* background-color: #444; */
   color: white;
   float: left;
   margin-right: 10px;
-  height: 75px;
 }
 
-a.navbar-brand {
-  padding-top: 25px;
+.navbar-nav {
+  display: inline !important;
+  padding-left: 125px;
+}
+
+.container-fluid {
+  background-color: #515865!important;
+  margin:auto;
+  padding: auto;
+
 }
 
 .nav>li {
@@ -69,8 +78,17 @@ a.navbar-brand {
   text-decoration: none
 }
 
+.navbar {
+  background-color: #515865!important;
+}
+
 a {
+  font-family: 'IBM Plex Sans', sans-serif;
   color: white !important;
+  text-decoration: none;
+  background-color: transparent;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 a:hover {
@@ -94,7 +112,8 @@ h2 {
 }
 
 .gameLibrary {
-  MARGIN-TOP: 25px;
+  margin-top: 25px;
+  margin-bottom: 100px;
 }
 
 h3 {
@@ -104,9 +123,12 @@ h3 {
 
 p {
   font-family: 'IBM Plex Sans', sans-serif;
-  color:#667c8a;
+  color: #667c8a;
   margin-top: 1rem !important;
+}
 
+.card-body {
+  height: 165px;
 }
 
 td {
@@ -240,7 +262,6 @@ table {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
-
 
 #myInput {
   width: 500px;

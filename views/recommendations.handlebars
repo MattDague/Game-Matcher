@@ -24,26 +24,25 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse navbar-dark bg-dark mb-1">
-        <div class="container-fluid">
+    <nav class="navbar">
 
-            <div class="navbar-header">
-                <a class="navbar-brand">Game Matcher</a>
-            </div>
+        <div class="navbar-header">
+            <a href="/dashboard" class="navbar-brand">Game Matcher</a>
+        </div>
 
-            <div style="display: inline-block;">
-                <ul class="nav navbar-nav">
-                    <li><a href="/dashboard">Dashboard</a>
-                    </li>
-                    <li><a href="/api/videogames">API Lists</a>
-                    </li>
-                    <li><a href="/logout">Logout</a>
-                    </li>
-                </ul>
-            </div>
-
+        <div style="display: inline-block;">
+            <ul class="nav navbar-nav">
+                <li><a href="/dashboard">Dashboard</a>
+                </li>
+                <li><a href="/api/videogames">API Lists</a>
+                </li>
+                <li><a href="/logout">Logout</a>
+                </li>
+            </ul>
         </div>
     </nav>
+
+
     <!-- Container Div -->
     <div class="container">
 
@@ -80,8 +79,8 @@
 
 
         <!-- a Bootstrap row with columns -->
-        <h2 id="left">Game Recommendations</h2>
-        <p>You received 5 game recommendations from similar gamers</p>
+        <h2 id="left">Game ecommendations</h2>
+        <p>You received 4 game recommendations from users</p>
         </br>
         <div class="row">
             {{#each matches}}

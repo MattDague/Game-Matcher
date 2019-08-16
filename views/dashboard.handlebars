@@ -14,33 +14,31 @@
 </head>
 
 <body>
-    <div class="navdiv">
-       <nav class="navbar navbar-inverse navbar-dark bg-dark mb-1">
-           <div class="container-fluid">
-               <div class="navbar-header">
-                   <a class="navbar-brand" href="/recommendations">Game Matcher</a>
-               </div>
-               <div style="display: inline-block;">
-                   <ul class="nav navbar-nav">
-                       <li><a href="/recommendations">Recommendations</a>
-                       </li>
-                       <li><a href="/api/videogames">API Lists</a>
-                       </li>
-                       <li><a href="/logout">Logout</a>
-                       </li>
-                   </ul>
-               </div>
-           </div>
-       </nav>
-    </div>
+    <nav class="navbar">
+
+        <div class="navbar-header">
+            <a href="/dashboard" class="navbar-brand">Game Matcher</a>
+        </div>
+
+        <div style="display: inline-block;">
+            <ul class="nav navbar-nav">
+                <li><a href="/dashboard">Dashboard</a>
+                </li>
+                <li><a href="/api/videogames">API Lists</a>
+                </li>
+                <li><a href="/logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="container">
         <div class="topSection">
-            <h2>Select at least five games</h2>
+            <h2>Select four of your favorite games</h2>
             <div class="addGame">
                 <input type="text" id="myInput" onkeyup="searchGames()" placeholder="Search for games"
                     title="Type in a name">
-                            <button id="submitGame">Submit</button>
+                <button id="submitGame">Submit</button>
 
                 <!-- Button trigger modal -->
                 <button type="button" class="add btn btn-primary" data-toggle="modal" data-target="#addGameModal">
@@ -179,7 +177,7 @@
         </div>
     </div>
     <!-- Modal End -->
-    
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
