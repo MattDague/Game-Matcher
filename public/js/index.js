@@ -22,6 +22,8 @@ function userGames(userGames) {
     method: "PUT",
     url: "/api/videogames",
     data: { games: userGames }
+  }).then(function() {
+    window.location.href = "/recommendations";
   });
 }
 $("#submitGame").click(function() {
@@ -35,14 +37,13 @@ $("#submitGame").click(function() {
   });
   if (arr.length >= 4) {
     userGames(arr);
-    window.location.href = "/recommendations";
   } else if (arr.length < 4) {
     arr = [];
     alert("Please add at least 4 games!");
   }
 });
 
-$("#addGameSubmit").on("click", function (event) {
+$("#addGameSubmit").on("click", function(event) {
   event.preventDefault();
   var newGame = {
     name: $("#enterGameTitle").val(),
