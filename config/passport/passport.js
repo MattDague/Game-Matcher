@@ -3,7 +3,7 @@ var bCrypt = require("bcrypt-nodejs");
 module.exports = function(passport, user) {
   var User = user;
   var LocalStrategy = require("passport-local").Strategy;
-
+//passport function
   passport.use(
     "local-signup",
     new LocalStrategy(
@@ -17,7 +17,7 @@ module.exports = function(passport, user) {
         var generateHash = function(password) {
           return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
         };
-
+        //username creation
         User.findOne({
           where: {
             username: username
@@ -69,7 +69,7 @@ module.exports = function(passport, user) {
       {
         usernameField: "username",
         passwordField: "password",
-        passReqToCallback: true // allows us to pass back the entire request to the callback
+        passReqToCallback: true 
       },
 
       function(req, username, password, done) {

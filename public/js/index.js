@@ -17,6 +17,7 @@ function searchGames() {
     }
   }
 }
+// function updating user profile with games
 function userGames(userGames) {
   $.ajax({
     method: "PUT",
@@ -26,6 +27,7 @@ function userGames(userGames) {
     window.location.href = "/recommendations";
   });
 }
+// submit function for games
 $("#submitGame").click(function() {
   var arr = [];
   $.each($(".vgcb:checked"), function() {
@@ -33,8 +35,8 @@ $("#submitGame").click(function() {
       var gameId = this.value;
       arr.push(gameId);
     }
-    console.log(arr);
   });
+  //forces only 4 games, user table was designed with 4 columns for games so it had to ahere to this
   if (arr.length >= 4) {
     userGames(arr);
   } else if (arr.length < 4) {
@@ -42,7 +44,7 @@ $("#submitGame").click(function() {
     alert("Please add at least 4 games!");
   }
 });
-
+//add game to database list
 $("#addGameSubmit").on("click", function(event) {
   event.preventDefault();
   var newGame = {

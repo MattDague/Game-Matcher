@@ -4,7 +4,6 @@ var app = express();
 var passport = require("passport");
 var session = require("express-session");
 var exphbs = require("express-handlebars");
-// var env = require("dotenv");
 var db = require("./models");
 var models = require("./models");
 var app = express();
@@ -41,13 +40,10 @@ require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
 
-// If running a test, set syncOptions.force to true
-// clearing the `testdb`
 if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
 
-// Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
   app.listen(PORT, function() {
     console.log(
