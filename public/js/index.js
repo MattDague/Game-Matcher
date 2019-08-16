@@ -35,9 +35,10 @@ $("#submitGame").click(function() {
   });
   if (arr.length >= 4) {
     userGames(arr);
+    window.location.href = "/recommendations";
   } else if (arr.length < 4) {
     arr = [];
-    alert("addmoregamez");
+    alert("Please add at least 4 games!");
   }
 });
 
