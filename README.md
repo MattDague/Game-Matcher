@@ -11,13 +11,14 @@ The game list presents two core functionalities. The list itself pulls from our 
 Now when a user hit submit they are transported to our recommendations page. The purpose of this page is to display the users game selections and the selections of another random user. The app checks the users game columns based on who is currently signed in and then references those ids in the videogame database. It uses that information to populate the 4 spaces with game information for the user! This same way is used to present the user with matches but it uses a formula to select a random user id. The user sees the final product of this screen which is 4 recommended games and to keep track of what they selected they see their own as well!
 
 # Technologies Used
+----------------------------------------
 
--MySQL
--JavaScript
--Express
--Node
--PassportJs
--Heroku
--Bcrypt
--Handlebars
--Body-Parser
+- MySQL
+- JavaScript
+- Express
+- Node
+- PassportJs
+- Heroku
+- Bcrypt
+- Handlebars
+- Body-Parser
