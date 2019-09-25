@@ -1,5 +1,7 @@
 # Game Matcher
 
+https://groupproj2.herokuapp.com
+
 Welcome to Game Matcher! The purpose of this app is to help those Gamers out there find even more games to play. It is a community based website that allows users to create profiles, list their favorite games and see the recommendations that others have. This is powered by a database of hundreds of games that is ever expanding since the users have the opportunity to add to that database.
 
 # How it works
@@ -22,3 +24,5 @@ Now when a user hit submit they are transported to our recommendations page. The
 - Bcrypt
 - Handlebars
 - Body-Parser
+
+
